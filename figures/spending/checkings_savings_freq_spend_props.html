@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"hconcat": [{"data": {"name": "data-c46683221ed32199340f1025c4c53538"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "prop", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "prop", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 500, "title": "Checkings Spending Distribution by Category", "width": 500}, {"data": {"name": "data-5f7cf2675544ac3327973de3da678ac8"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "prop", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "prop", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 500, "title": "Savings Spending Distribution by Category", "width": 500}]}, {"hconcat": [{"data": {"name": "data-eb6ed0eef8db8045457ee351dd43dde9"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "Proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 500, "title": "Checkings Transactions Category Distribution", "width": 500}, {"data": {"name": "data-f81bbe398d6a1d968c2908b3fa985791"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "Proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 500, "title": "Savings Transactions Category Distribution", "width": 500}]}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-c46683221ed32199340f1025c4c53538": [{"Category": "Automotive Expenses", "checkings_sum": 46.97, "prop": 0.0031141453272239415}, {"Category": "Clothing/Shoes", "checkings_sum": 889.54, "prop": 0.05897715210514765}, {"Category": "Electronics", "checkings_sum": 2001.27, "prop": 0.13268566359406977}, {"Category": "Entertainment", "checkings_sum": 709.03, "prop": 0.04700920718249077}, {"Category": "Gasoline/Fuel", "checkings_sum": 40.0, "prop": 0.0026520292333182386}, {"Category": "General Merchandise", "checkings_sum": 3742.58, "prop": 0.24813578920080434}, {"Category": "Groceries", "checkings_sum": 120.57000000000001, "prop": 0.007993879116529502}, {"Category": "Hobbies", "checkings_sum": 206.24, "prop": 0.013673862726988839}, {"Category": "Loans", "checkings_sum": 1560.5700000000002, "prop": 0.1034669315159861}, {"Category": "Online Services", "checkings_sum": 189.0, "prop": 0.012530838127428678}, {"Category": "Other Expenses", "checkings_sum": 295.06, "prop": 0.019562693639571988}, {"Category": "Personal Care", "checkings_sum": 377.32, "prop": 0.025016591757890946}, {"Category": "Restaurants/Dining", "checkings_sum": 3111.59, "prop": 0.20630069105251747}, {"Category": "Service Charges/Fees", "checkings_sum": 16.35, "prop": 0.0010840169491188301}, {"Category": "Transfers", "checkings_sum": 311.09000000000003, "prop": 0.020625494354824275}, {"Category": "Travel", "checkings_sum": 1465.6100000000001, "prop": 0.09717101411608861}], "data-5f7cf2675544ac3327973de3da678ac8": [{"Category": "Loans", "savings_sum": 7945.11, "prop": 0.5502511936372588}, {"Category": "Online Services", "savings_sum": 854.63, "prop": 0.05918875605475702}, {"Category": "Securities Trades", "savings_sum": 1493.3500000000001, "prop": 0.10342432263596106}, {"Category": "Transfers", "savings_sum": 4145.97, "prop": 0.28713572767202294}], "data-eb6ed0eef8db8045457ee351dd43dde9": [{"Category": "Automotive Expenses", "checkings_count": 2.0, "Proportion": 0.003355704697986577}, {"Category": "Clothing/Shoes", "checkings_count": 19.0, "Proportion": 0.031879194630872486}, {"Category": "Electronics", "checkings_count": 3.0, "Proportion": 0.0050335570469798654}, {"Category": "Entertainment", "checkings_count": 37.0, "Proportion": 0.06208053691275168}, {"Category": "Gasoline/Fuel", "checkings_count": 1.0, "Proportion": 0.0016778523489932886}, {"Category": "General Merchandise", "checkings_count": 162.0, "Proportion": 0.27181208053691275}, {"Category": "Groceries", "checkings_count": 12.0, "Proportion": 0.020134228187919462}, {"Category": "Hobbies", "checkings_count": 5.0, "Proportion": 0.008389261744966443}, {"Category": "Loans", "checkings_count": 3.0, "Proportion": 0.0050335570469798654}, {"Category": "Online Services", "checkings_count": 7.0, "Proportion": 0.01174496644295302}, {"Category": "Other Expenses", "checkings_count": 12.0, "Proportion": 0.020134228187919462}, {"Category": "Personal Care", "checkings_count": 15.0, "Proportion": 0.025167785234899327}, {"Category": "Restaurants/Dining", "checkings_count": 229.0, "Proportion": 0.38422818791946306}, {"Category": "Service Charges/Fees", "checkings_count": 63.0, "Proportion": 0.10570469798657718}, {"Category": "Transfers", "checkings_count": 10.0, "Proportion": 0.016778523489932886}, {"Category": "Travel", "checkings_count": 16.0, "Proportion": 0.026845637583892617}], "data-f81bbe398d6a1d968c2908b3fa985791": [{"Category": "Loans", "savings_count": 8.0, "Proportion": 0.17777777777777778}, {"Category": "Online Services", "savings_count": 1.0, "Proportion": 0.022222222222222223}, {"Category": "Securities Trades", "savings_count": 28.0, "Proportion": 0.6222222222222222}, {"Category": "Transfers", "savings_count": 8.0, "Proportion": 0.17777777777777778}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

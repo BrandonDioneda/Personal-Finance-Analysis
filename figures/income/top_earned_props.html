@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-8071aa19e03247a4635fc0966af65c3d"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Proportion", "format": ".2%", "title": "Proportion", "type": "quantitative"}], "x": {"axis": {"labelAngle": 360}, "field": "Category", "sort": "-y", "type": "nominal"}, "y": {"field": "Proportion", "title": "Proportion (%)", "type": "quantitative"}}, "height": 400, "title": "Share of Total Income by Source", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-8071aa19e03247a4635fc0966af65c3d": [{"Category": "Deposits", "Amount": 3740.24, "Proportion": 0.09194834899386935}, {"Category": "Paychecks/Salary", "Amount": 36357.57, "Proportion": 0.893797867230187}, {"Category": "Transfers", "Amount": 500.0, "Proportion": 0.012291771249153711}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

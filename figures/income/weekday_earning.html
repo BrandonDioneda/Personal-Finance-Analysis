@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-f1815c33e1a8b9d62ac5bb71b4a21f27"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Amount", "format": "$,.2f", "title": "Amount ($)", "type": "quantitative"}], "x": {"axis": {"labelAngle": 360}, "field": "Day", "sort": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "title": "Weekday", "type": "ordinal"}, "y": {"field": "Amount", "title": "Amount ($)", "type": "quantitative"}}, "height": 600, "title": "Money Earned on Each Weekday Across Years 2023-2026", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-f1815c33e1a8b9d62ac5bb71b4a21f27": [{"Day": "Sunday", "Amount": 8.11}, {"Day": "Monday", "Amount": 2775.54}, {"Day": "Tuesday", "Amount": 717.88}, {"Day": "Wednesday", "Amount": 2840.5800000000004}, {"Day": "Thursday", "Amount": 34282.73}, {"Day": "Friday", "Amount": 52.42}, {"Day": "Saturday", "Amount": 0.36}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

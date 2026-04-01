@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "hconcat": [{"data": {"name": "data-0bcdc61dc7a97772457eba3b06ea25ef"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Category", "type": "nominal"}, {"field": "checkings_count", "type": "quantitative"}, {"field": "Proportion", "format": ".2%", "type": "quantitative"}], "x": {"axis": {"labelAngle": 360}, "field": "Category", "sort": "-y", "type": "nominal"}, "y": {"axis": {"format": "%"}, "field": "Proportion", "title": "Proportion (%)", "type": "quantitative"}}, "height": 400, "title": "Checkings Top 4 Category Proportions", "width": 700}, {"data": {"name": "data-f81bbe398d6a1d968c2908b3fa985791"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Category", "type": "nominal"}, {"field": "savings_count", "type": "quantitative"}, {"field": "Proportion", "format": ".2%", "type": "quantitative"}], "x": {"axis": {"labelAngle": 360}, "field": "Category", "sort": "-y", "type": "nominal"}, "y": {"axis": {"format": "%"}, "field": "Proportion", "title": "Proportion (%)", "type": "quantitative"}}, "height": 400, "title": "Savings Top 4 Category Proportions", "width": 700}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-0bcdc61dc7a97772457eba3b06ea25ef": [{"Category": "Entertainment", "checkings_count": 37.0, "Proportion": 0.06208053691275168}, {"Category": "General Merchandise", "checkings_count": 162.0, "Proportion": 0.27181208053691275}, {"Category": "Restaurants/Dining", "checkings_count": 229.0, "Proportion": 0.38422818791946306}, {"Category": "Service Charges/Fees", "checkings_count": 63.0, "Proportion": 0.10570469798657718}], "data-f81bbe398d6a1d968c2908b3fa985791": [{"Category": "Loans", "savings_count": 8.0, "Proportion": 0.17777777777777778}, {"Category": "Online Services", "savings_count": 1.0, "Proportion": 0.022222222222222223}, {"Category": "Securities Trades", "savings_count": 28.0, "Proportion": 0.6222222222222222}, {"Category": "Transfers", "savings_count": 8.0, "Proportion": 0.17777777777777778}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

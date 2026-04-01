@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-8b043ba043a06845c2bc89611f9a27da"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Account", "type": "nominal"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Account", "type": "nominal"}, {"field": "Amount", "format": "$,.2f", "title": "Amount", "type": "quantitative"}], "x": {"field": "Category", "sort": "-y", "type": "nominal"}, "y": {"field": "Amount", "title": "Amount ($)", "type": "quantitative"}}, "height": 400, "title": "Account Activity", "width": 1000, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-8b043ba043a06845c2bc89611f9a27da": [{"Category": "Automotive Expenses", "Account": "checkings", "Amount": 46.97}, {"Category": "Clothing/Shoes", "Account": "checkings", "Amount": 889.54}, {"Category": "Electronics", "Account": "checkings", "Amount": 2001.27}, {"Category": "Entertainment", "Account": "checkings", "Amount": 709.03}, {"Category": "Gasoline/Fuel", "Account": "checkings", "Amount": 40.0}, {"Category": "General Merchandise", "Account": "checkings", "Amount": 3742.58}, {"Category": "Groceries", "Account": "checkings", "Amount": 120.57000000000001}, {"Category": "Hobbies", "Account": "checkings", "Amount": 206.24}, {"Category": "Loans", "Account": "checkings", "Amount": 1560.5700000000002}, {"Category": "Online Services", "Account": "checkings", "Amount": 189.0}, {"Category": "Other Expenses", "Account": "checkings", "Amount": 295.06}, {"Category": "Personal Care", "Account": "checkings", "Amount": 377.32}, {"Category": "Restaurants/Dining", "Account": "checkings", "Amount": 3111.59}, {"Category": "Securities Trades", "Account": "checkings", "Amount": 0.0}, {"Category": "Service Charges/Fees", "Account": "checkings", "Amount": 16.35}, {"Category": "Transfers", "Account": "checkings", "Amount": 311.09000000000003}, {"Category": "Travel", "Account": "checkings", "Amount": 1465.6100000000001}, {"Category": "Automotive Expenses", "Account": "savings", "Amount": 0.0}, {"Category": "Clothing/Shoes", "Account": "savings", "Amount": 0.0}, {"Category": "Electronics", "Account": "savings", "Amount": 0.0}, {"Category": "Entertainment", "Account": "savings", "Amount": 0.0}, {"Category": "Gasoline/Fuel", "Account": "savings", "Amount": 0.0}, {"Category": "General Merchandise", "Account": "savings", "Amount": 0.0}, {"Category": "Groceries", "Account": "savings", "Amount": 0.0}, {"Category": "Hobbies", "Account": "savings", "Amount": 0.0}, {"Category": "Loans", "Account": "savings", "Amount": 7945.11}, {"Category": "Online Services", "Account": "savings", "Amount": 854.63}, {"Category": "Other Expenses", "Account": "savings", "Amount": 0.0}, {"Category": "Personal Care", "Account": "savings", "Amount": 0.0}, {"Category": "Restaurants/Dining", "Account": "savings", "Amount": 0.0}, {"Category": "Securities Trades", "Account": "savings", "Amount": 1493.3500000000001}, {"Category": "Service Charges/Fees", "Account": "savings", "Amount": 0.0}, {"Category": "Transfers", "Account": "savings", "Amount": 4145.97}, {"Category": "Travel", "Account": "savings", "Amount": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
