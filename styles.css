@@ -24,10 +24,6 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   Header / hero
-========================= */
-
 .hero {
   background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
   color: white;
@@ -76,10 +72,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* =========================
-   Main layout
-========================= */
-
 .container {
   max-width: 1700px;
   margin: 0 auto;
@@ -108,20 +100,13 @@ body {
   margin-right: auto;
 }
 
-/* =========================
-   Figure cards
-========================= */
-
 .figure-card {
-  --figure-width: 800;
-  --figure-height: 600;
-  --figure-scale: 1;
-
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin: 2rem auto;
-  width: min(100%, calc(var(--figure-width) * 1px * var(--figure-scale) + 3rem));
+  width: 100%;
+  max-width: 100%;
   box-shadow: var(--shadow);
 }
 
@@ -137,78 +122,37 @@ body {
   margin-right: auto;
 }
 
-/* visible area for embedded figures */
 .figure-frame-wrap {
-  width: min(100%, calc(var(--figure-width) * 1px * var(--figure-scale)));
-  aspect-ratio: var(--figure-width) / var(--figure-height);
+  position: relative;
+  width: 100%;
   margin: 1rem auto 0;
   overflow: hidden;
   border-radius: 12px;
   background: white;
-  position: relative;
 }
 
-/* embedded chart */
 .figure-frame {
   position: absolute;
   top: 0;
   left: 50%;
-  width: calc(var(--figure-width) * 1px);
-  height: calc(var(--figure-height) * 1px);
   border: none;
   background: white;
-  transform: translateX(-50%) scale(var(--figure-scale));
-  transform-origin: top center;
   display: block;
-  overflow: hidden;
+  transform-origin: top center;
 }
 
-/* Static image figures */
 .figure-image {
   display: block;
-  width: min(var(--figure-width), 100%);
+  width: min(100%, 900px);
   height: auto;
   margin: 1rem auto 0;
   border-radius: 12px;
 }
 
-/* Utility sizing presets */
-.figure-sm {
-  --figure-width: 800;
-  --figure-height: 600;
-  --figure-scale: 0.9;
-}
-
-.figure-md {
-  --figure-width: 1000;
-  --figure-height: 650;
-  --figure-scale: 0.85;
-}
-
-.figure-lg {
-  --figure-width: 1400;
-  --figure-height: 760;
-  --figure-scale: 0.68;
-}
-
-.figure-xl {
-  --figure-width: 1500;
-  --figure-height: 800;
-  --figure-scale: 0.66;
-}
-
-/* =========================
-   Lists
-========================= */
-
 ul {
   padding-left: 1.25rem;
   max-width: 950px;
 }
-
-/* =========================
-   Responsive
-========================= */
 
 @media (max-width: 900px) {
   .navbar {
@@ -236,13 +180,7 @@ ul {
   }
 
   .figure-card {
-    width: 100%;
     padding: 1rem;
-  }
-
-  .figure-frame-wrap {
-    width: 100%;
-    overflow: hidden;
   }
 
   .figure-image {
