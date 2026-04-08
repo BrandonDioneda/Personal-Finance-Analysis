@@ -110,23 +110,18 @@ body {
 
 /* =========================
    Figure cards
-   Each card can define:
-   --figure-width
-   --figure-height
-   --figure-scale
 ========================= */
 
 .figure-card {
-  --figure-width: 800px;
-  --figure-height: 600px;
+  --figure-width: 800;
+  --figure-height: 600;
   --figure-scale: 1;
 
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin: 2rem auto;
-  width: fit-content;
-  max-width: 100%;
+  width: min(100%, calc(var(--figure-width) * 1px * var(--figure-scale) + 3rem));
   box-shadow: var(--shadow);
 }
 
@@ -142,28 +137,30 @@ body {
   margin-right: auto;
 }
 
-/* Outer visible viewport */
+/* visible area for embedded figures */
 .figure-frame-wrap {
-  width: min(calc(var(--figure-width) * var(--figure-scale)), 100%);
-  height: calc(var(--figure-height) * var(--figure-scale));
+  width: min(100%, calc(var(--figure-width) * 1px * var(--figure-scale)));
+  aspect-ratio: var(--figure-width) / var(--figure-height);
   margin: 1rem auto 0;
   overflow: hidden;
   border-radius: 12px;
   background: white;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  position: relative;
 }
 
-/* Actual embedded html chart */
+/* embedded chart */
 .figure-frame {
-  display: block;
-  width: var(--figure-width);
-  height: var(--figure-height);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(var(--figure-width) * 1px);
+  height: calc(var(--figure-height) * 1px);
   border: none;
   background: white;
-  transform: scale(var(--figure-scale));
+  transform: translateX(-50%) scale(var(--figure-scale));
   transform-origin: top center;
+  display: block;
+  overflow: hidden;
 }
 
 /* Static image figures */
@@ -175,28 +172,28 @@ body {
   border-radius: 12px;
 }
 
-/* Utility sizing presets if you want to reuse classes later */
+/* Utility sizing presets */
 .figure-sm {
-  --figure-width: 800px;
-  --figure-height: 600px;
+  --figure-width: 800;
+  --figure-height: 600;
   --figure-scale: 0.9;
 }
 
 .figure-md {
-  --figure-width: 1000px;
-  --figure-height: 650px;
+  --figure-width: 1000;
+  --figure-height: 650;
   --figure-scale: 0.85;
 }
 
 .figure-lg {
-  --figure-width: 1400px;
-  --figure-height: 760px;
+  --figure-width: 1400;
+  --figure-height: 760;
   --figure-scale: 0.68;
 }
 
 .figure-xl {
-  --figure-width: 1500px;
-  --figure-height: 800px;
+  --figure-width: 1500;
+  --figure-height: 800;
   --figure-scale: 0.66;
 }
 
@@ -245,14 +242,7 @@ ul {
 
   .figure-frame-wrap {
     width: 100%;
-    height: auto;
-    overflow: auto;
-  }
-
-  .figure-frame {
-    transform: none;
-    width: max(100%, 700px);
-    min-height: 340px;
+    overflow: hidden;
   }
 
   .figure-image {

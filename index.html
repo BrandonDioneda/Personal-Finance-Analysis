@@ -15,6 +15,7 @@
         <a href="#question">Research Question</a>
         <a href="#data">Data</a>
         <a href="#patterns">Patterns</a>
+        <a href="#Spending_Relative_to_Income">Patterns</a>
         <a href="#distribution">Distribution Analysis</a>
         <a href="#results">Results</a>
         <a href="#conclusion">Conclusion</a>
@@ -87,35 +88,38 @@
     <section id="patterns" class="section">
       <h2>Spending Patterns</h2>
 
-      <div class="figure-card" style="--figure-width: 1600px; --figure-height: 650px; --figure-scale: 0.58;">
+      <div class="figure-card" style="--figure-width: 1600; --figure-height: 600; --figure-scale: 0.95;">
         <h3>Spending Breakdown</h3>
         <p>
-          This chart shows how total spending varies across the years 2023-2026.
+          How total spending varies across the years 2023-2026.
+          Also visualizes how much each spending category contributes to spending in corresponding years.
         </p>
         <div class="figure-frame-wrap">
           <iframe
             class="figure-frame"
             src="figures/spending/spending_breakdown.html"
-            title="Spending Breakdown">
+            title="Spending Breakdown"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" style="--figure-width: 1400px; --figure-height: 760px; --figure-scale: 0.68;">
+      <div class="figure-card" style="--figure-width: 600; --figure-height: 300; --figure-scale: 0.95;">
         <h3>Spending Category Breakdown</h3>
         <p>
-          This chart summarizes category-level spending and proportions across years.
+          Category-level spending and proportions across years.
         </p>
         <div class="figure-frame-wrap">
           <iframe
             class="figure-frame"
             src="figures/spending/cat_spend_freq__props_by_year.html"
-            title="Spending Category Breakdown">
+            title="Spending Category Breakdown"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" style="--figure-width: 1500px; --figure-height: 800px; --figure-scale: 0.66;">
+      <div class="figure-card" style="--figure-width: 1500; --figure-height: 800; --figure-scale: 0.95;">
         <h3>Daily Spending Across the Years</h3>
         <p>
           This figure compares daily category spending patterns over time.
@@ -124,56 +128,15 @@
           <iframe
             class="figure-frame"
             src="figures/spending/all_daily_category_lines.html"
-            title="Daily Spending Across the Years">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="figure-card" style="--figure-width: 800px; --figure-height: 600px; --figure-scale: 0.95;">
-        <h3>Spending by Month</h3>
-        <p>
-          This chart shows how monthly spending changes over time.
-        </p>
-        <div class="figure-frame-wrap">
-          <iframe
-            class="figure-frame"
-            src="figures/spending/monthly_spending.html"
-            title="Spending by Month">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="figure-card" style="--figure-width: 1000px; --figure-height: 620px; --figure-scale: 0.9;">
-        <h3>Spending by Month in Each Year</h3>
-        <p>
-          This chart compares monthly spending across individual years.
-        </p>
-        <div class="figure-frame-wrap">
-          <iframe
-            class="figure-frame"
-            src="figures/spending/month_yearly_spending.html"
-            title="Spending by Month in Each Year">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="figure-card" style="--figure-width: 1500px; --figure-height: 500px; --figure-scale: 0.66;">
-        <h3>Spending by Category Over Time</h3>
-        <p>
-          This chart tracks category-level spending trends over time.
-        </p>
-        <div class="figure-frame-wrap">
-          <iframe
-            class="figure-frame"
-            src="figures/spending/monthly_category_lines.html"
-            title="Spending by Category Over Time">
+            title="Daily Spending Across the Years"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
       <h2>Income Patterns</h2>
 
-      <div class="figure-card" style="--figure-width: 800px; --figure-height: 600px; --figure-scale: 0.95;">
+      <div class="figure-card" style="--figure-width: 700; --figure-height: 400; --figure-scale: 0.95;">
         <h3>Income Category Breakdown</h3>
         <p>
           This chart shows the main categories contributing to income.
@@ -182,12 +145,13 @@
           <iframe
             class="figure-frame"
             src="figures/income/top_income_sources.html"
-            title="Income Category Breakdown">
+            title="Income Category Breakdown"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" style="--figure-width: 1600px; --figure-height: 650px; --figure-scale: 0.58;">
+      <div class="figure-card" style="--figure-width: 1600; --figure-height: 600; --figure-scale: 0.95;">
         <h3>Income Breakdown</h3>
         <p>
           This chart shows how total income varies across the years 2023-2026.
@@ -196,12 +160,13 @@
           <iframe
             class="figure-frame"
             src="figures/income/income_breakdown.html"
-            title="Income Breakdown">
+            title="Income Breakdown"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" style="--figure-width: 1400px; --figure-height: 760px; --figure-scale: 0.68;">
+      <div class="figure-card" style="--figure-width: 1000; --figure-height: 500; --figure-scale: 0.95;">
         <h3>Earning Proportions</h3>
         <p>
           This chart summarizes income frequency and source proportions across years.
@@ -210,35 +175,57 @@
           <iframe
             class="figure-frame"
             src="figures/income/freq_earned_props.html"
-            title="Earning Proportions">
+            title="Earning Proportions"
+            scrolling="no">
           </iframe>
         </div>
       </div>
+    </section>
 
-      <div class="figure-card" style="--figure-width: 800px; --figure-height: 600px; --figure-scale: 0.95;">
-        <h3>Monthly Income</h3>
+    <section id="Spending_Relative_to_Income" class="section">
+      <h2>Spending Relative to Income</h2>
+
+      <div class="figure-card" style="--figure-width: 800; --figure-height: 800; --figure-scale: 0.95;">
+        <h3>Annual Spending and Income Comparison</h3>
         <p>
-          This chart shows how income changes by month.
+          
         </p>
         <div class="figure-frame-wrap">
           <iframe
             class="figure-frame"
-            src="figures/income/monthly_earning.html"
-            title="Monthly Income">
+            src="figures/spend_vs_income/yearly.html"
+            title="Monthly Income"
+            scrolling="no">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" style="--figure-width: 1000px; --figure-height: 620px; --figure-scale: 0.9;">
-        <h3>Monthly Income per Year</h3>
+      <div class="figure-card" style="--figure-width: 1600; --figure-height: 1600; --figure-scale: 0.95;">
+        <h3>Comparison by Month</h3>
         <p>
-          This chart compares monthly income across individual years.
+          
         </p>
         <div class="figure-frame-wrap">
           <iframe
             class="figure-frame"
-            src="figures/income/month_yearly_earning.html"
-            title="Monthly Income per Year">
+            src="figures/spend_vs_income/monthly_all.html"
+            title="Monthly Income"
+            scrolling="no">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="figure-card" style="--figure-width: 1600; --figure-height: 1600; --figure-scale: 0.95;">
+        <h3>Comparison by Month in Each Year</h3>
+        <p>
+          
+        </p>
+        <div class="figure-frame-wrap">
+          <iframe
+            class="figure-frame"
+            src="figures/spend_vs_income/monthly_yearly_all.html"
+            title="Monthly Income"
+            scrolling="no">
           </iframe>
         </div>
       </div>
@@ -247,54 +234,52 @@
     <section id="distribution" class="section">
       <h2>Spending Distribution Analysis</h2>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>Expected Frequencies</h3>
         <img class="figure-image" src="figures/spend_ht/chi-square_residuals.png" alt="Spending expected frequencies" />
       </div>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/freq_tvd_heatmap.png" alt="Spending TVD frequency heatmap" />
       </div>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>TVD Spending Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/spending_tvd_heatmap.png" alt="Spending TVD heatmap" />
       </div>
 
       <h2>Income Distribution Analysis</h2>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>Expected Frequencies</h3>
         <img class="figure-image" src="figures/income_ht/chi-square_residuals.png" alt="Income expected frequencies" />
       </div>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/income_ht/freq_tvd_heatmap.png" alt="Income TVD frequency heatmap" />
       </div>
 
-      <div class="figure-card" style="--figure-width: 900px;">
+      <div class="figure-card" style="--figure-width: 900;">
         <h3>TVD Earnings Heatmap</h3>
         <img class="figure-image" src="figures/income_ht/earning_tvd_heatmap.png" alt="Income TVD heatmap" />
       </div>
     </section>
 
     <section id="results" class="section">
-      <h2>Key Findings</h2>
-      <ul>
-        <li>Spending patterns vary noticeably across years and across categories.</li>
-        <li>A few categories make up a large portion of total expenses.</li>
-        <li>Some year pairs have more different category distributions than others.</li>
-      </ul>
-    </section>
+          <h2>Key Findings</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
 
     <section id="conclusion" class="section">
       <h2>Conclusion</h2>
       <p>
-        This analysis shows that transaction data can reveal meaningful behavioral
-        patterns in spending over time. Future work could compare spending with
-        income, study recurring expenses, or model seasonal effects.
+        
       </p>
     </section>
   </main>
