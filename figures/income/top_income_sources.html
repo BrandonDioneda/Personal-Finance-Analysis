@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>top_income_sources</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <style>
-    #vis.vega-embed {
+    html, body {
+      margin: 0;
+      padding: 0;
       width: 100%;
-      display: flex;
+      height: 100%;
+      overflow: hidden;
+      background: white;
+      font-family: Arial, sans-serif;
     }
 
-    #vis.vega-embed details,
-    #vis.vega-embed details summary {
-      position: relative;
+    #vis {
+      width: 100%;
+      height: 100%;
+    }
+
+    .vega-embed,
+    .vega-embed summary,
+    .vega-embed details,
+    .vega-embed > div {
+      width: 100%;
+      height: 100%;
     }
   </style>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
   <div id="vis"></div>
+
   <script>
-    (function(vegaEmbed) {
-      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-d0dc5b9390f5e0012ccb2d8ff0b7be19"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Proportion", "type": "quantitative"}], "x": {"axis": {"labelAngle": 360}, "field": "Category", "sort": "-y", "type": "nominal"}, "y": {"field": "proportion", "title": "Proportion (%)", "type": "quantitative"}}, "height": 400, "title": "Top 4 Income Sources", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-d0dc5b9390f5e0012ccb2d8ff0b7be19": [{"Category": "Paychecks/Salary", "proportion": 0.3508771929824561}, {"Category": "Investment Income", "proportion": 0.2719298245614035}, {"Category": "Interest", "proportion": 0.19298245614035087}, {"Category": "Deposits", "proportion": 0.09649122807017543}]}};
-      var embedOpt = {"mode": "vega-lite"};
-
-      function showError(el, error){
-          el.innerHTML = ('<div style="color:red;">'
-                          + '<p>JavaScript Error: ' + error.message + '</p>'
-                          + "<p>This usually means there's a typo in your chart specification. "
-                          + "See the javascript console for the full traceback.</p>"
-                          + '</div>');
-          throw error;
-      }
-      const el = document.getElementById('vis');
-      vegaEmbed("#vis", spec, embedOpt)
-        .catch(error => showError(el, error));
-    })(vegaEmbed);
-
+    vegaEmbed("#vis", "top_income_sources.json", {
+      actions: false,
+      renderer: "svg"
+    });
   </script>
 </body>
 </html>
