@@ -143,11 +143,21 @@ body {
   background: white;
 }
 
-/* Iframes need an explicit pixel height — aspect-ratio clips their content */
+/* Iframes: render at full figure size, then scale down to fit the container */
 .figure-frame-wrap.is-iframe {
-  aspect-ratio: unset;
-  height: var(--figure-height);
-  max-height: 90vh;
+  aspect-ratio: calc(var(--figure-width) / var(--figure-height));
+  overflow: hidden;
+  position: relative;
+}
+
+.figure-frame-wrap.is-iframe .figure-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--figure-width) !important;
+  height: var(--figure-height) !important;
+  transform-origin: top left;
+  transform: scale(var(--iframe-scale, 1));
 }
 
 .figure-image {
