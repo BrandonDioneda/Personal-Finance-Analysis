@@ -1,1 +1,534 @@
-{"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"hconcat": [{"data": {"name": "data-0b656cc41148a53396e968436cdf8c89"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 300, "title": "2023", "width": 300}, {"data": {"name": "data-046c91272f5d6de3c6d6c8faa0488d97"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 300, "title": "2024", "width": 300}]}, {"hconcat": [{"data": {"name": "data-296ff25460e0fc8e0718710fb4c6f57b"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 300, "title": "2025", "width": 300}, {"data": {"name": "data-d588e205859a7b0db8f80be6b7c127b5"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 300, "title": "2026", "width": 300}]}], "title": {"text": "Spending Proportions by Category for 2023\u20132026", "anchor": "middle"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-0b656cc41148a53396e968436cdf8c89": [{"Category": "Automotive Expenses", "proportion": 0.0}, {"Category": "Clothing/Shoes", "proportion": 0.016142748225910504}, {"Category": "Electronics", "proportion": 0.0}, {"Category": "Entertainment", "proportion": 0.060458330889683894}, {"Category": "Gasoline/Fuel", "proportion": 0.0}, {"Category": "General Merchandise", "proportion": 0.034506773796258286}, {"Category": "Groceries", "proportion": 0.0}, {"Category": "Hobbies", "proportion": 0.009999413524133484}, {"Category": "Loans", "proportion": 0.0}, {"Category": "Online Services", "proportion": 0.6525497038296875}, {"Category": "Other Expenses", "proportion": 0.0}, {"Category": "Personal Care", "proportion": 0.020526655328133248}, {"Category": "Restaurants/Dining", "proportion": 0.17209401208140285}, {"Category": "Securities Trades", "proportion": 0.0}, {"Category": "Service Charges/Fees", "proportion": 0.0}, {"Category": "Transfers", "proportion": 0.03152307782534749}, {"Category": "Travel", "proportion": 0.002199284499442848}], "data-046c91272f5d6de3c6d6c8faa0488d97": [{"Category": "Automotive Expenses", "proportion": 0.0}, {"Category": "Clothing/Shoes", "proportion": 0.030009571533134393}, {"Category": "Electronics", "proportion": 0.0}, {"Category": "Entertainment", "proportion": 0.10187886877063758}, {"Category": "Gasoline/Fuel", "proportion": 0.0}, {"Category": "General Merchandise", "proportion": 0.2641080755256891}, {"Category": "Groceries", "proportion": 0.011995879935218272}, {"Category": "Hobbies", "proportion": 0.0010664476364274666}, {"Category": "Loans", "proportion": 0.0}, {"Category": "Online Services", "proportion": 0.004802326313105051}, {"Category": "Other Expenses", "proportion": 0.010233922970685936}, {"Category": "Personal Care", "proportion": 0.07493285023034606}, {"Category": "Restaurants/Dining", "proportion": 0.29342876162908155}, {"Category": "Securities Trades", "proportion": 0.0}, {"Category": "Service Charges/Fees", "proportion": 0.0}, {"Category": "Transfers", "proportion": 0.1994290199611177}, {"Category": "Travel", "proportion": 0.008114275494556811}], "data-296ff25460e0fc8e0718710fb4c6f57b": [{"Category": "Automotive Expenses", "proportion": 0.0}, {"Category": "Clothing/Shoes", "proportion": 0.022999402131261115}, {"Category": "Electronics", "proportion": 0.09896582060080615}, {"Category": "Entertainment", "proportion": 0.012979537460259531}, {"Category": "Gasoline/Fuel", "proportion": 0.0019780603436978746}, {"Category": "General Merchandise", "proportion": 0.13351660062417695}, {"Category": "Groceries", "proportion": 0.0024681247938490233}, {"Category": "Hobbies", "proportion": 0.009365126697237589}, {"Category": "Loans", "proportion": 0.3928976754329355}, {"Category": "Online Services", "proportion": 0.006873759694350115}, {"Category": "Other Expenses", "proportion": 0.013063110509780767}, {"Category": "Personal Care", "proportion": 0.0054436220658565515}, {"Category": "Restaurants/Dining", "proportion": 0.05316531688773963}, {"Category": "Securities Trades", "proportion": 0.047421029649641004}, {"Category": "Service Charges/Fees", "proportion": 0.0008085321654865064}, {"Category": "Transfers", "proportion": 0.1269375719210378}, {"Category": "Travel", "proportion": 0.07111670902188377}], "data-d588e205859a7b0db8f80be6b7c127b5": [{"Category": "Automotive Expenses", "proportion": 0.009553408168702978}, {"Category": "Clothing/Shoes", "proportion": 0.06342226389535795}, {"Category": "Electronics", "proportion": 0.0}, {"Category": "Entertainment", "proportion": 0.011487683486658384}, {"Category": "Gasoline/Fuel", "proportion": 0.0}, {"Category": "General Merchandise", "proportion": 0.040296385488257064}, {"Category": "Groceries", "proportion": 0.007004883485844806}, {"Category": "Hobbies", "proportion": 0.0}, {"Category": "Loans", "proportion": 0.3174103084060636}, {"Category": "Online Services", "proportion": 0.0}, {"Category": "Other Expenses", "proportion": 0.0}, {"Category": "Personal Care", "proportion": 0.002642085844399653}, {"Category": "Restaurants/Dining", "proportion": 0.18626196718443958}, {"Category": "Securities Trades", "proportion": 0.10869569638996292}, {"Category": "Service Charges/Fees", "proportion": 0.0}, {"Category": "Transfers", "proportion": 0.25322531765031314}, {"Category": "Travel", "proportion": 0.0}]}}
+{
+    "config": {
+        "view": {
+            "continuousWidth": 400,
+            "continuousHeight": 400
+        }
+    },
+    "vconcat": [
+        {
+            "hconcat": [
+                {
+                    "data": {
+                        "name": "data-0b656cc41148a53396e968436cdf8c89"
+                    },
+                    "mark": {
+                        "type": "arc"
+                    },
+                    "encoding": {
+                        "color": {
+                            "field": "Category",
+                            "scale": {
+                                "domain": [
+                                    "Automotive Expenses",
+                                    "Clothing/Shoes",
+                                    "Electronics",
+                                    "Entertainment",
+                                    "Gasoline/Fuel",
+                                    "General Merchandise",
+                                    "Groceries",
+                                    "Hobbies",
+                                    "Loans",
+                                    "Online Services",
+                                    "Other Expenses",
+                                    "Personal Care",
+                                    "Restaurants/Dining",
+                                    "Securities Trades",
+                                    "Service Charges/Fees",
+                                    "Transfers",
+                                    "Travel"
+                                ],
+                                "scheme": "tableau20"
+                            },
+                            "type": "nominal"
+                        },
+                        "theta": {
+                            "field": "proportion",
+                            "title": "Percent",
+                            "type": "quantitative"
+                        },
+                        "tooltip": [
+                            {
+                                "field": "Category",
+                                "type": "nominal"
+                            },
+                            {
+                                "field": "proportion",
+                                "format": ".2%",
+                                "title": "Percent",
+                                "type": "quantitative"
+                            }
+                        ]
+                    },
+                    "height": 300,
+                    "title": "2023",
+                    "width": 300
+                },
+                {
+                    "data": {
+                        "name": "data-046c91272f5d6de3c6d6c8faa0488d97"
+                    },
+                    "mark": {
+                        "type": "arc"
+                    },
+                    "encoding": {
+                        "color": {
+                            "field": "Category",
+                            "scale": {
+                                "domain": [
+                                    "Automotive Expenses",
+                                    "Clothing/Shoes",
+                                    "Electronics",
+                                    "Entertainment",
+                                    "Gasoline/Fuel",
+                                    "General Merchandise",
+                                    "Groceries",
+                                    "Hobbies",
+                                    "Loans",
+                                    "Online Services",
+                                    "Other Expenses",
+                                    "Personal Care",
+                                    "Restaurants/Dining",
+                                    "Securities Trades",
+                                    "Service Charges/Fees",
+                                    "Transfers",
+                                    "Travel"
+                                ],
+                                "scheme": "tableau20"
+                            },
+                            "type": "nominal"
+                        },
+                        "theta": {
+                            "field": "proportion",
+                            "title": "Percent",
+                            "type": "quantitative"
+                        },
+                        "tooltip": [
+                            {
+                                "field": "Category",
+                                "type": "nominal"
+                            },
+                            {
+                                "field": "proportion",
+                                "format": ".2%",
+                                "title": "Percent",
+                                "type": "quantitative"
+                            }
+                        ]
+                    },
+                    "height": 300,
+                    "title": "2024",
+                    "width": 300
+                }
+            ]
+        },
+        {
+            "hconcat": [
+                {
+                    "data": {
+                        "name": "data-296ff25460e0fc8e0718710fb4c6f57b"
+                    },
+                    "mark": {
+                        "type": "arc"
+                    },
+                    "encoding": {
+                        "color": {
+                            "field": "Category",
+                            "scale": {
+                                "domain": [
+                                    "Automotive Expenses",
+                                    "Clothing/Shoes",
+                                    "Electronics",
+                                    "Entertainment",
+                                    "Gasoline/Fuel",
+                                    "General Merchandise",
+                                    "Groceries",
+                                    "Hobbies",
+                                    "Loans",
+                                    "Online Services",
+                                    "Other Expenses",
+                                    "Personal Care",
+                                    "Restaurants/Dining",
+                                    "Securities Trades",
+                                    "Service Charges/Fees",
+                                    "Transfers",
+                                    "Travel"
+                                ],
+                                "scheme": "tableau20"
+                            },
+                            "type": "nominal"
+                        },
+                        "theta": {
+                            "field": "proportion",
+                            "title": "Percent",
+                            "type": "quantitative"
+                        },
+                        "tooltip": [
+                            {
+                                "field": "Category",
+                                "type": "nominal"
+                            },
+                            {
+                                "field": "proportion",
+                                "format": ".2%",
+                                "title": "Percent",
+                                "type": "quantitative"
+                            }
+                        ]
+                    },
+                    "height": 300,
+                    "title": "2025",
+                    "width": 300
+                },
+                {
+                    "data": {
+                        "name": "data-d588e205859a7b0db8f80be6b7c127b5"
+                    },
+                    "mark": {
+                        "type": "arc"
+                    },
+                    "encoding": {
+                        "color": {
+                            "field": "Category",
+                            "scale": {
+                                "domain": [
+                                    "Automotive Expenses",
+                                    "Clothing/Shoes",
+                                    "Electronics",
+                                    "Entertainment",
+                                    "Gasoline/Fuel",
+                                    "General Merchandise",
+                                    "Groceries",
+                                    "Hobbies",
+                                    "Loans",
+                                    "Online Services",
+                                    "Other Expenses",
+                                    "Personal Care",
+                                    "Restaurants/Dining",
+                                    "Securities Trades",
+                                    "Service Charges/Fees",
+                                    "Transfers",
+                                    "Travel"
+                                ],
+                                "scheme": "tableau20"
+                            },
+                            "type": "nominal"
+                        },
+                        "theta": {
+                            "field": "proportion",
+                            "title": "Percent",
+                            "type": "quantitative"
+                        },
+                        "tooltip": [
+                            {
+                                "field": "Category",
+                                "type": "nominal"
+                            },
+                            {
+                                "field": "proportion",
+                                "format": ".2%",
+                                "title": "Percent",
+                                "type": "quantitative"
+                            }
+                        ]
+                    },
+                    "height": 300,
+                    "title": "2026",
+                    "width": 300
+                }
+            ]
+        }
+    ],
+    "title": {
+        "text": "Spending Proportions by Category for 2023\u20132026",
+        "anchor": "middle"
+    },
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+    "datasets": {
+        "data-0b656cc41148a53396e968436cdf8c89": [
+            {
+                "Category": "Automotive Expenses",
+                "proportion": 0
+            },
+            {
+                "Category": "Clothing/Shoes",
+                "proportion": 0.016142748225910504
+            },
+            {
+                "Category": "Electronics",
+                "proportion": 0
+            },
+            {
+                "Category": "Entertainment",
+                "proportion": 0.060458330889683894
+            },
+            {
+                "Category": "Gasoline/Fuel",
+                "proportion": 0
+            },
+            {
+                "Category": "General Merchandise",
+                "proportion": 0.034506773796258286
+            },
+            {
+                "Category": "Groceries",
+                "proportion": 0
+            },
+            {
+                "Category": "Hobbies",
+                "proportion": 0.009999413524133484
+            },
+            {
+                "Category": "Loans",
+                "proportion": 0
+            },
+            {
+                "Category": "Online Services",
+                "proportion": 0.6525497038296875
+            },
+            {
+                "Category": "Other Expenses",
+                "proportion": 0
+            },
+            {
+                "Category": "Personal Care",
+                "proportion": 0.020526655328133248
+            },
+            {
+                "Category": "Restaurants/Dining",
+                "proportion": 0.17209401208140285
+            },
+            {
+                "Category": "Securities Trades",
+                "proportion": 0
+            },
+            {
+                "Category": "Service Charges/Fees",
+                "proportion": 0
+            },
+            {
+                "Category": "Transfers",
+                "proportion": 0.03152307782534749
+            },
+            {
+                "Category": "Travel",
+                "proportion": 0.002199284499442848
+            }
+        ],
+        "data-046c91272f5d6de3c6d6c8faa0488d97": [
+            {
+                "Category": "Automotive Expenses",
+                "proportion": 0
+            },
+            {
+                "Category": "Clothing/Shoes",
+                "proportion": 0.030009571533134393
+            },
+            {
+                "Category": "Electronics",
+                "proportion": 0
+            },
+            {
+                "Category": "Entertainment",
+                "proportion": 0.10187886877063758
+            },
+            {
+                "Category": "Gasoline/Fuel",
+                "proportion": 0
+            },
+            {
+                "Category": "General Merchandise",
+                "proportion": 0.2641080755256891
+            },
+            {
+                "Category": "Groceries",
+                "proportion": 0.011995879935218272
+            },
+            {
+                "Category": "Hobbies",
+                "proportion": 0.0010664476364274666
+            },
+            {
+                "Category": "Loans",
+                "proportion": 0
+            },
+            {
+                "Category": "Online Services",
+                "proportion": 0.004802326313105051
+            },
+            {
+                "Category": "Other Expenses",
+                "proportion": 0.010233922970685936
+            },
+            {
+                "Category": "Personal Care",
+                "proportion": 0.07493285023034606
+            },
+            {
+                "Category": "Restaurants/Dining",
+                "proportion": 0.29342876162908155
+            },
+            {
+                "Category": "Securities Trades",
+                "proportion": 0
+            },
+            {
+                "Category": "Service Charges/Fees",
+                "proportion": 0
+            },
+            {
+                "Category": "Transfers",
+                "proportion": 0.1994290199611177
+            },
+            {
+                "Category": "Travel",
+                "proportion": 0.008114275494556811
+            }
+        ],
+        "data-296ff25460e0fc8e0718710fb4c6f57b": [
+            {
+                "Category": "Automotive Expenses",
+                "proportion": 0
+            },
+            {
+                "Category": "Clothing/Shoes",
+                "proportion": 0.022999402131261115
+            },
+            {
+                "Category": "Electronics",
+                "proportion": 0.09896582060080615
+            },
+            {
+                "Category": "Entertainment",
+                "proportion": 0.012979537460259531
+            },
+            {
+                "Category": "Gasoline/Fuel",
+                "proportion": 0.0019780603436978746
+            },
+            {
+                "Category": "General Merchandise",
+                "proportion": 0.13351660062417695
+            },
+            {
+                "Category": "Groceries",
+                "proportion": 0.0024681247938490233
+            },
+            {
+                "Category": "Hobbies",
+                "proportion": 0.009365126697237589
+            },
+            {
+                "Category": "Loans",
+                "proportion": 0.3928976754329355
+            },
+            {
+                "Category": "Online Services",
+                "proportion": 0.006873759694350115
+            },
+            {
+                "Category": "Other Expenses",
+                "proportion": 0.013063110509780767
+            },
+            {
+                "Category": "Personal Care",
+                "proportion": 0.0054436220658565515
+            },
+            {
+                "Category": "Restaurants/Dining",
+                "proportion": 0.05316531688773963
+            },
+            {
+                "Category": "Securities Trades",
+                "proportion": 0.047421029649641004
+            },
+            {
+                "Category": "Service Charges/Fees",
+                "proportion": 0.0008085321654865064
+            },
+            {
+                "Category": "Transfers",
+                "proportion": 0.1269375719210378
+            },
+            {
+                "Category": "Travel",
+                "proportion": 0.07111670902188377
+            }
+        ],
+        "data-d588e205859a7b0db8f80be6b7c127b5": [
+            {
+                "Category": "Automotive Expenses",
+                "proportion": 0.009553408168702978
+            },
+            {
+                "Category": "Clothing/Shoes",
+                "proportion": 0.06342226389535795
+            },
+            {
+                "Category": "Electronics",
+                "proportion": 0
+            },
+            {
+                "Category": "Entertainment",
+                "proportion": 0.011487683486658384
+            },
+            {
+                "Category": "Gasoline/Fuel",
+                "proportion": 0
+            },
+            {
+                "Category": "General Merchandise",
+                "proportion": 0.040296385488257064
+            },
+            {
+                "Category": "Groceries",
+                "proportion": 0.007004883485844806
+            },
+            {
+                "Category": "Hobbies",
+                "proportion": 0
+            },
+            {
+                "Category": "Loans",
+                "proportion": 0.3174103084060636
+            },
+            {
+                "Category": "Online Services",
+                "proportion": 0
+            },
+            {
+                "Category": "Other Expenses",
+                "proportion": 0
+            },
+            {
+                "Category": "Personal Care",
+                "proportion": 0.002642085844399653
+            },
+            {
+                "Category": "Restaurants/Dining",
+                "proportion": 0.18626196718443958
+            },
+            {
+                "Category": "Securities Trades",
+                "proportion": 0.10869569638996292
+            },
+            {
+                "Category": "Service Charges/Fees",
+                "proportion": 0
+            },
+            {
+                "Category": "Transfers",
+                "proportion": 0.25322531765031314
+            },
+            {
+                "Category": "Travel",
+                "proportion": 0
+            }
+        ]
+    },
+    "autosize": {
+        "type": "fit",
+        "contains": "padding"
+    },
+    "center": true
+}
