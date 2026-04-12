@@ -1,61 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cat_spend_props</title>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <meta charset="UTF-8">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
+    #vis.vega-embed {
       width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: white;
-      font-family: Arial, sans-serif;
+      display: flex;
     }
 
-    #vis {
-      width: 100%;
-      height: 100%;
-    }
-
-    .vega-embed,
-    .vega-embed summary,
-    .vega-embed details,
-    .vega-embed > div {
-      width: 100%;
-      height: 100%;
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
     }
   </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
   <div id="vis"></div>
-
   <script>
-    vegaEmbed("#vis", "cat_spend_props.json", {
-      actions: false,
-      renderer: "svg"
-    });
-  </script>
-<!-- patched by make_figures_responsive -->
-<script>
-  window.addEventListener('load', function () {
-    var plots = document.querySelectorAll('.plotly-graph-div');
-    plots.forEach(function (plot) {
-      plot.style.width = '100%';
-      plot.style.height = '100%';
-      if (window.Plotly) {
-        Plotly.relayout(plot, { autosize: true });
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-bdc36ec2a6e60b7c5dbce54b20afa87f"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "proportion", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Percent", "type": "quantitative"}]}, "height": 500, "title": "Spending Distribution by Category", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-bdc36ec2a6e60b7c5dbce54b20afa87f": [{"Category": "Automotive Expenses", "proportion": 0.0015910249527045222}, {"Category": "Clothing/Shoes", "proportion": 0.03013158050731915}, {"Category": "Electronics", "proportion": 0.06778945086435978}, {"Category": "Entertainment", "proportion": 0.02401712629797929}, {"Category": "Gasoline/Fuel", "proportion": 0.0013549286376023182}, {"Category": "General Merchandise", "proportion": 0.1267732205129421}, {"Category": "Groceries", "proportion": 0.004084093645892788}, {"Category": "Hobbies", "proportion": 0.006986012055477553}, {"Category": "Loans", "proportion": 0.3219879512970901}, {"Category": "Online Services", "proportion": 0.03535110435152269}, {"Category": "Other Expenses", "proportion": 0.0099946310952735}, {"Category": "Personal Care", "proportion": 0.012781041838502667}, {"Category": "Restaurants/Dining", "proportion": 0.10539955998692493}, {"Category": "Securities Trades", "proportion": 0.05058456702408555}, {"Category": "Service Charges/Fees", "proportion": 0.0005538270806199476}, {"Category": "Transfers", "proportion": 0.15097495583779472}, {"Category": "Travel", "proportion": 0.04964492401390834}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
       }
-    });
-    document.documentElement.style.height = '100%';
-    document.body.style.height = '100%';
-    document.body.style.margin = '0';
-  });
-</script>
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
 </body>
 </html>

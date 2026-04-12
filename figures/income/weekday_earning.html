@@ -38,21 +38,5 @@
     })(vegaEmbed);
 
   </script>
-<!-- patched by make_figures_responsive -->
-<script>
-  window.addEventListener('load', function () {
-    var plots = document.querySelectorAll('.plotly-graph-div');
-    plots.forEach(function (plot) {
-      plot.style.width = '100%';
-      plot.style.height = '100%';
-      if (window.Plotly) {
-        Plotly.relayout(plot, { autosize: true });
-      }
-    });
-    document.documentElement.style.height = '100%';
-    document.body.style.height = '100%';
-    document.body.style.margin = '0';
-  });
-</script>
 </body>
 </html>
