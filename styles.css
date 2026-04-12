@@ -100,6 +100,17 @@ body {
   margin-right: auto;
 }
 
+.figure-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.figure-row .figure-frame-wrap {
+  flex: 1;
+  min-width: 0; /* prevents flex children from overflowing */
+}
+
 .figure-card {
   --figure-width: 1200px;
   --figure-height: 700px;
