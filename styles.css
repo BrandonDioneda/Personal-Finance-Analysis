@@ -140,22 +140,14 @@ body {
   background: white;
 }
 
-/* standard aspect-ratio cards */
-.ratio-1-1 .figure-frame-wrap { aspect-ratio: 1 / 1; }
-.ratio-5-3 .figure-frame-wrap { aspect-ratio: 5 / 3; }
-.ratio-3-2 .figure-frame-wrap { aspect-ratio: 3 / 2; }
-.ratio-2-1 .figure-frame-wrap { aspect-ratio: 2 / 1; }
-.ratio-10-7 .figure-frame-wrap { aspect-ratio: 10 / 7; }
-.ratio-14-9 .figure-frame-wrap { aspect-ratio: 14 / 9; }
+.figure-image {
+  display: block;
+  width: min(100%, 1000px);
+  height: auto;
+  margin: 1rem auto 0;
+  border-radius: 12px;
+}
 
-/* use these for charts that should show the full figure without internal scroll */
-.tall-520 .figure-frame-wrap { height: 520px; }
-.tall-600 .figure-frame-wrap { height: 600px; }
-.tall-680 .figure-frame-wrap { height: 680px; }
-.tall-760 .figure-frame-wrap { height: 760px; }
-.tall-860 .figure-frame-wrap { height: 860px; }
-
-/* two-up rows */
 .figure-row {
   display: flex;
   gap: 1rem;
@@ -167,27 +159,80 @@ body {
   flex: 1 1 480px;
 }
 
-.ratio-1-1-wrap { aspect-ratio: 1 / 1; }
-.ratio-5-3-wrap { aspect-ratio: 5 / 3; }
-.ratio-10-7-wrap { aspect-ratio: 10 / 7; }
+/* Aspect ratios for single-chart cards */
+.ratio-1-1 .figure-frame-wrap {
+  aspect-ratio: 1 / 1;
+}
 
-/* mobile */
+.ratio-5-3 .figure-frame-wrap {
+  aspect-ratio: 5 / 3;
+}
+
+.ratio-3-2 .figure-frame-wrap {
+  aspect-ratio: 3 / 2;
+}
+
+.ratio-2-1 .figure-frame-wrap {
+  aspect-ratio: 2 / 1;
+}
+
+.ratio-10-7 .figure-frame-wrap {
+  aspect-ratio: 10 / 7;
+}
+
+.ratio-14-9 .figure-frame-wrap {
+  aspect-ratio: 14 / 9;
+}
+
+/* Aspect ratios for frames inside multi-chart rows */
+.ratio-1-1-wrap {
+  aspect-ratio: 1 / 1;
+}
+
+.ratio-5-3-wrap {
+  aspect-ratio: 5 / 3;
+}
+
+.ratio-10-7-wrap {
+  aspect-ratio: 10 / 7;
+}
+
+ul {
+  padding-left: 1.25rem;
+  max-width: 950px;
+}
+
 @media (max-width: 900px) {
+  .navbar {
+    justify-content: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
+
   .figure-card {
     padding: 1rem;
   }
 
   .figure-image {
     width: 100%;
-  }
-
-  .tall-520 .figure-frame-wrap,
-  .tall-600 .figure-frame-wrap,
-  .tall-680 .figure-frame-wrap,
-  .tall-760 .figure-frame-wrap,
-  .tall-860 .figure-frame-wrap {
-    height: auto;
-    aspect-ratio: 1 / 1;
   }
 }
 
