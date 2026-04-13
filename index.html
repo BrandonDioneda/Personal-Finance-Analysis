@@ -21,232 +21,239 @@
         <a href="#conclusion">Conclusion</a>
       </div>
     </nav>
+
     <div class="hero-content">
       <h1>Personal Finance Analysis</h1>
-      <p>A report exploring transaction behavior, spending patterns, and year-to-year changes in category distributions.</p>
+      <p>
+        A report exploring transaction behavior, spending patterns,
+        and year-to-year changes in category distributions.
+      </p>
     </div>
   </header>
 
   <main class="container">
     <section id="intro" class="section">
       <h2>Introduction</h2>
-      <p>This project analyzes personal transaction data to better understand spending behavior across time and categories. The goal is to identify meaningful patterns and communicate them through visual and statistical analysis.</p>
+      <p>
+        This project analyzes personal transaction data to better understand
+        spending behavior across time and categories. The goal is to identify
+        meaningful patterns and communicate them through visual and statistical analysis.
+      </p>
     </section>
 
     <section id="question" class="section">
       <h2>Research Question</h2>
-      <p>How do spending habits differ across years (2023-2026) and categories? Are category spending distributions meaningfully different from one year to another?</p>
+      <p>
+        How do spending habits differ across years (2023-2026) and categories?
+        Are category spending distributions meaningfully different from one year to another?
+      </p>
     </section>
 
     <section id="data" class="section">
       <h2>Data Overview</h2>
-      <p>The dataset contains transaction-level financial records with variables such as: transaction date, amount, category, whether a record is considered credit/debit, and a description of the transaction (similar to a bank memo).</p>
+      <p>
+        The dataset contains transaction-level financial records with variables such as:
+        transaction date, amount, category, whether a record is considered credit/debit,
+        and a description of the transaction (similar to a bank memo).
+      </p>
+
       <h3>Data Preparation</h3>
-      <p>Steps had to be made to make sure the data was ready for analysis as some info was missing in certain columns.</p>
+      <p>
+        Steps had to be made to make sure the data was ready for analysis as some info
+        was missing in certain columns.
+      </p>
       <ul>
         <li>Removed columns that were entirely empty.</li>
-        <li>There were some transactions that were not categorized, but it was a small amount so I manually assigned them to the correct one.</li>
+        <li>
+          There were some transactions that were not categorized, but it was a small amount
+          so I manually assigned them to the correct one.
+        </li>
       </ul>
+
       <p>Added some columns to make analysis easier:</p>
       <ul>
-        <li>Using the date column, I extracted the month and year the transaction was made (the time of day could not be extracted due to how Navy Federal stored the data).</li>
-        <li>To analyze spending and income patterns, I defined spending as money leaving my checking and savings accounts. A special category I had to deal with was transfers. I did not want certain transfers between checking and savings to count as either spending or income, but I did want transfers to and from external bank accounts to count.</li>
+        <li>
+          Using the date column, I extracted the month and year the transaction was made
+          (the time of day could not be extracted due to how Navy Federal stored the data).
+        </li>
+        <li>
+          To analyze spending and income patterns, I defined spending as money leaving my
+          checking and savings accounts. A special category I had to deal with was transfers.
+          I did not want certain transfers between checking and savings to count as either
+          spending or income, but I did want transfers to and from external bank accounts to count.
+        </li>
       </ul>
     </section>
 
     <section id="patterns" class="section">
       <h2>Spending Patterns</h2>
 
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Spending Breakdown</h3>
         <p>How total spending varies across the years 2023-2026</p>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spending/year_breakdown.html" 
-            title="Spending Breakdown" 
-            scrolling="no">
+          <iframe
+            src="figures/spending/year_breakdown.html"
+            title="Spending Breakdown"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Spending Categories</h3>
         <p>How each category contributes to spending throughout the entire time period</p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/cat_spend_props.html" 
-          title="Spending Breakdown" 
-          scrolling="no">
-        </iframe>
+          <iframe
+            src="figures/spending/cat_spend_props.html"
+            title="Spending Categories"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="700" data-fig-h="450">
+      <div class="figure-card ratio-14-9">
         <h3>Top Spending Categories</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spending/cat_spend_props_top5_area.html" 
-            title="Spending Breakdown" 
-            scrolling="no">
+          <iframe
+            src="figures/spending/cat_spend_props_top5_area.html"
+            title="Top Spending Categories"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="800" data-fig-h="800">
+      <div class="figure-card ratio-1-1">
         <h3>Spending Breakdown</h3>
         <p>How frequent each category is across the years</p>
         <div class="figure-frame-wrap">
-          <iframe src="figures/spending/cat_spend_props_by_year.html" title="Category Freq Props by Year" scrolling="no"></iframe>
+          <iframe
+            src="figures/spending/cat_spend_props_by_year.html"
+            title="Category Frequency Proportions by Year"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Most Frequent Spending Categories</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/cat_freq_props_top5_area.html" 
-          title="Spending Breakdown" 
-          scrolling="no">
-        </iframe>
+          <iframe
+            src="figures/spending/cat_freq_props_top5_area.html"
+            title="Most Frequent Spending Categories"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
 
-      <!-- <div class="figure-card" data-fig-w="1000" data-fig-h="900">
-        <h3>Spending Breakdown</h3>
-        <p>How frequent each category is across the years.</p>
-        <div class="figure-frame-wrap">
-          <iframe src="figures/spending/cat_freq_props_by_year.html" title="Category Freq Props by Year" scrolling="no"></iframe>
-        </div>
-      </div> -->
-
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Spending Throughout the Week</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/weekday_spending.html" 
-          title="Category Freq Props by Year" 
-          scrolling="no">
+          <iframe
+            src="figures/spending/weekday_spending.html"
+            title="Spending Throughout the Week"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Average Spending Throughout the Week and per Year</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/weekday_avgs.html" 
-          title="Category Freq Props by Year" 
-          scrolling="no">
+          <iframe
+            src="figures/spending/weekday_avgs.html"
+            title="Average Spending Throughout the Week and per Year"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <!-- <div class="figure-card" data-fig-w="1500" data-fig-h="1000">
-        <h3>Spending Category Changes Throughout Time</h3>
-        <p>Spending done in each category seen on a daily basis for corresponding years</p>
-        <div class="figure-frame-wrap">
-          <iframe src="figures/spending/all_daily_category_lines.html" title="Category Freq Props by Year" scrolling="no"></iframe>
-        </div>
-      </div> -->
-      
-      <div class="figure-card" data-fig-w="1500" data-fig-h="900">
-        <h3></h3>
+      <div class="figure-card ratio-5-3">
+        <h3>Monthly Spending by Category</h3>
         <p>Monthly spending for each category in each year</p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/monthly_category_lines.html" 
-          title="Category Freq Props by Year" 
-          scrolling="no">
+          <iframe
+            src="figures/spending/monthly_category_lines.html"
+            title="Monthly Spending by Category"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="1000" data-fig-h="600">
+      <div class="figure-card ratio-5-3">
         <h3>Top Spending Categories on a Monthly Basis</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spending/monthly_top5_prop_area_by_year.html" 
-            title="Spending Breakdown" 
-            scrolling="no">
+          <iframe
+            src="figures/spending/monthly_top5_prop_area_by_year.html"
+            title="Top Spending Categories on a Monthly Basis"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="1000" data-fig-h="600">
+      <div class="figure-card ratio-5-3">
         <h3>Most Frequent Spending Categories on a Monthly Basis</h3>
         <p></p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spending/monthly_top5_count_prop_area_by_year.html" 
-          title="Spending Breakdown" 
-          scrolling="no">
-        </iframe>
+          <iframe
+            src="figures/spending/monthly_top5_count_prop_area_by_year.html"
+            title="Most Frequent Spending Categories on a Monthly Basis"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
 
       <h2>Income Patterns</h2>
 
-      <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Income Breakdown</h3>
         <p>This chart shows how total income varies across the years 2023-2026.</p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/income/year_breakdown.html" 
-          title="Income Breakdown" 
-          scrolling="no">
+          <iframe
+            src="figures/income/year_breakdown.html"
+            title="Income Breakdown"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="800" data-fig-h="800">
+      <div class="figure-card ratio-1-1">
         <h3>Earning Proportions</h3>
         <p>This chart summarizes income frequency and source proportions across all years.</p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/income/freq_earned_props.html" 
-          title="Earning Proportions" 
-          scrolling="no">
+          <iframe
+            src="figures/income/freq_earned_props.html"
+            title="Earning Proportions"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="800" data-fig-h="800">
+      <div class="figure-card ratio-1-1">
         <h3>Earning Proportions by each Category for Corresponding Years</h3>
         <p>This chart summarizes income proportions across all years.</p>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/income/cat_income_props_by_year.html" 
-          title="Earning Proportions" 
-          scrolling="no" 
-        ></iframe>
+          <iframe
+            src="figures/income/cat_income_props_by_year.html"
+            title="Income Proportions by Category and Year"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
 
-      <!-- <div class="figure-card" data-fig-w="1000" data-fig-h="900">
-        <h3>Frequency Proportions by each Category for Corresponding Years</h3>
-        <p>This chart summarizes income frequency proportions across all years.</p>
-        <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/income/cat_freq_props_by_year.html" 
-          title="Earning Proportions" 
-          scrolling="no"  
-        ></iframe>
-        </div>
-      </div> -->
-
-    <div class="figure-card" data-fig-w="600" data-fig-h="600">
+      <div class="figure-card ratio-1-1">
         <h3>Income Throughout the Week</h3>
         <p>Seeing which weekday sees the most profit</p>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/income/weekday_earning.html" 
-            title="Earning Proportions" 
-            scrolling="no">
+          <iframe
+            src="figures/income/weekday_earning.html"
+            title="Income Throughout the Week"
+            loading="lazy">
           </iframe>
         </div>
       </div>
@@ -255,66 +262,66 @@
     <section id="Spending_Relative_to_Income" class="section">
       <h2>Spending Relative to Income</h2>
 
-      <div class="figure-card" data-fig-w="1000" data-fig-h="700">
+      <div class="figure-card ratio-10-7">
         <h3>Annual Spending and Income Comparison</h3>
         <div class="figure-frame-wrap">
-          <iframe 
-          src="figures/spend_vs_income/yearly.html" 
-          title="Annual Spending and Income Comparison" 
-          scrolling="no">
+          <iframe
+            src="figures/spend_vs_income/yearly.html"
+            title="Annual Spending and Income Comparison"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="900" data-fig-h="900">
-        <h3>Spending & Income by Weekday</h3>
+      <div class="figure-card ratio-1-1">
+        <h3>Spending &amp; Income by Weekday</h3>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spend_vs_income/weekday.html" 
-            title="Weekday by Year" 
-            scrolling="no">
-        </iframe>
-        </div>
-      </div>
-      
-      <div class="figure-card" data-fig-w="1000" data-fig-h="700">
-        <h3>Spending & Income by Weekday in each Year</h3>
-        <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spend_vs_income/weekday_by_year.html" 
-            title="Weekday by Year" 
-            scrolling="no">
+          <iframe
+            src="figures/spend_vs_income/weekday.html"
+            title="Spending and Income by Weekday"
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="1000" data-fig-h="1000">
+      <div class="figure-card ratio-10-7">
+        <h3>Spending &amp; Income by Weekday in each Year</h3>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spend_vs_income/weekday_by_year.html"
+            title="Spending and Income by Weekday in Each Year"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="figure-card">
         <h3>Comparison by Month</h3>
-        <div class="figure-row">
-          <div class="figure-frame-wrap">
-            <iframe 
-              src="figures/spend_vs_income/monthly.html" 
-              title="Monthly Comparison" 
-              scrolling="no">
+        <div class="figure-row figure-row-halves">
+          <div class="figure-frame-wrap ratio-1-1-wrap">
+            <iframe
+              src="figures/spend_vs_income/monthly.html"
+              title="Monthly Comparison"
+              loading="lazy">
             </iframe>
           </div>
-          <div class="figure-frame-wrap">
-            <iframe 
-              src="figures/spend_vs_income/monthly_diffs.html" 
-              title="Monthly Differences" 
-              scrolling="no">
+          <div class="figure-frame-wrap ratio-1-1-wrap">
+            <iframe
+              src="figures/spend_vs_income/monthly_diffs.html"
+              title="Monthly Differences"
+              loading="lazy">
             </iframe>
           </div>
         </div>
       </div>
 
-      <div class="figure-card" data-fig-w="2000" data-fig-h="1000">
+      <div class="figure-card ratio-2-1">
         <h3>Comparison by Month in Each Year</h3>
         <div class="figure-frame-wrap">
-          <iframe 
-            src="figures/spend_vs_income/monthly_yearly_all.html" 
-            title="Comparison by Month in Each Year" 
-            scrolling="no">
+          <iframe
+            src="figures/spend_vs_income/monthly_yearly_all.html"
+            title="Comparison by Month in Each Year"
+            loading="lazy">
           </iframe>
         </div>
       </div>
@@ -322,28 +329,34 @@
 
     <section id="distribution" class="section">
       <h2>Spending Distribution Analysis</h2>
+
       <div class="figure-card">
         <h3>Expected Frequencies</h3>
         <img class="figure-image" src="figures/spend_ht/chi-square_residuals.png" alt="Spending expected frequencies" />
       </div>
+
       <div class="figure-card">
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/freq_tvd_heatmap.png" alt="Spending TVD frequency heatmap" />
       </div>
+
       <div class="figure-card">
         <h3>TVD Spending Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/spending_tvd_heatmap.png" alt="Spending TVD heatmap" />
       </div>
 
       <h2>Income Distribution Analysis</h2>
+
       <div class="figure-card">
         <h3>Expected Frequencies</h3>
         <img class="figure-image" src="figures/income_ht/chi-square_residuals.png" alt="Income expected frequencies" />
       </div>
+
       <div class="figure-card">
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/income_ht/freq_tvd_heatmap.png" alt="Income TVD frequency heatmap" />
       </div>
+
       <div class="figure-card">
         <h3>TVD Earnings Heatmap</h3>
         <img class="figure-image" src="figures/income_ht/earning_tvd_heatmap.png" alt="Income TVD heatmap" />
@@ -364,41 +377,5 @@
       <p></p>
     </section>
   </main>
-
-  <script>
-    function scaleWraps() {
-      document.querySelectorAll('.figure-card').forEach(function(card) {
-        var figW = parseFloat(card.dataset.figW) || 1200;
-        var figH = parseFloat(card.dataset.figH) || 700;
-
-        card.querySelectorAll('.figure-frame-wrap').forEach(function(wrap) {
-          var containerW = wrap.clientWidth;
-          var scale = containerW / figW;
-          var scaledH = figH * scale;
-
-          wrap.style.position = 'relative';
-          wrap.style.overflow = 'hidden';
-          wrap.style.height   = scaledH + 'px';
-          wrap.style.borderRadius = '12px';
-
-          var iframe = wrap.querySelector('iframe');
-          if (iframe) {
-            iframe.style.position        = 'absolute';
-            iframe.style.top             = '0';
-            iframe.style.left            = '0';
-            iframe.style.width           = figW + 'px';
-            iframe.style.height          = figH + 'px';
-            iframe.style.border          = 'none';
-            iframe.style.transformOrigin = 'top left';
-            iframe.style.transform       = 'scale(' + scale + ')';
-          }
-        });
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', scaleWraps);
-    window.addEventListener('load', scaleWraps);
-    window.addEventListener('resize', scaleWraps);
-  </script>
 </body>
 </html>
