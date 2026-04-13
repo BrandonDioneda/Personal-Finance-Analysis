@@ -300,35 +300,96 @@
       <h2>Spending Distribution Analysis</h2>
 
       <div class="figure-card">
-        <h3>Expected Frequencies</h3>
-        <img class="figure-image" src="figures/spend_ht/chi-square_residuals.png" alt="Spending expected frequencies" />
+        <h3>TVD Spending Heatmap</h3>
+        <img class="figure-image" src="figures/spend_ht/spending_tvd_heatmap.png" alt="Spending TVD heatmap" />
+        <p>
+          Differences between all the years with each other are statistcally significant
+        </p>
+        <ul>
+          <li> Based on the observed TVDs, 2025 and 2026 have similar patterns with each other already when it's only 3 months into 2026</li>
+             <ul>
+              <li> 2025 is the time where loan payments were starting, and I have made some of those same payments in 2026 (most significant category for those years too)</li>
+            </ul>
+          <li> The most drastic difference is 2023 vs. 2025 which makes sense as I was employed for all of 2025 (partially in 2024 as that's when I got the job during the summer) and was unemployed in 2023</li>
+          <li> TVD is the highest in comparison to 2023 the most</li>
+          <li> Would've thought that 2024 vs. 2025 would have the most similarities, but that wasn't the case (however not exactly the opposite of what I thought either)</li>
+            <ul> 
+              <li> I did get the job pretty late into 2024 and had more money to spend in 2025 </li>
+            </ul>
+        </ul>
       </div>
 
       <div class="figure-card">
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/freq_tvd_heatmap.png" alt="Spending TVD frequency heatmap" />
+        <p>
+          Differences between the years in terms of category proportions is statistically significant
+        </p>
+        <ul>
+          <li> Based on the observed TVDs, 2024 and 2026 have similar distributions</li>
+          <li> The most drastic difference is 2023 vs. 2025, which is the same trend for the spending distribution comparison</li>
+        </ul>
       </div>
 
       <div class="figure-card">
-        <h3>TVD Spending Heatmap</h3>
-        <img class="figure-image" src="figures/spend_ht/spending_tvd_heatmap.png" alt="Spending TVD heatmap" />
+        <h3>Expected Frequencies</h3>
+        <img class="figure-image" src="figures/spend_ht/chi-square_residuals.png" alt="Spending expected frequencies" />
+        <ul>
+          <li> Positive values → more transactions than expected</li>
+          <li> Negative values → fewer transactions than expected</li>
+          <p>Trends found:</p>
+          <ul>
+            <li>Online services collapsed after 2023</li> 
+            <li>Financial transactions surged in 2025</li>
+            <li>Groceries + automotive increased in 2026</li>
+          </ul>
+        </ul>
       </div>
 
       <h2>Income Distribution Analysis</h2>
+      
+      <div class="figure-card">
+        <h3>TVD Earnings Heatmap</h3>
+        <img class="figure-image" src="figures/income_ht/earning_tvd_heatmap.png" alt="Income TVD heatmap" />
+        <p>Differences in the earning distributions were all statistically significant</p>
+        <ul>
+            <li>2023 vs 2026: Most different (followed closely with 2023 vs 2025)</li> 
+            <li>2025 vs 2026: Most similar</li>
+          </ul>
+      </div>
+      
+      <div class="figure-card">
+        <h3>TVD Frequency Heatmap</h3>
+        <img class="figure-image" src="figures/income_ht/freq_tvd_heatmap.png" alt="Income TVD frequency heatmap" />
+        <p>Differences between the income source distributions were all statistically significant</p>
+        <ul>
+            <li>2023 vs 2024: Most different</li> 
+            <li>2025 vs 2026: Most similar (like the earning distribution)</li>
+          </ul>
+      </div>
 
       <div class="figure-card">
         <h3>Expected Frequencies</h3>
         <img class="figure-image" src="figures/income_ht/chi-square_residuals.png" alt="Income expected frequencies" />
-      </div>
-
-      <div class="figure-card">
-        <h3>TVD Frequency Heatmap</h3>
-        <img class="figure-image" src="figures/income_ht/freq_tvd_heatmap.png" alt="Income TVD frequency heatmap" />
-      </div>
-
-      <div class="figure-card">
-        <h3>TVD Earnings Heatmap</h3>
-        <img class="figure-image" src="figures/income_ht/earning_tvd_heatmap.png" alt="Income TVD heatmap" />
+        <ul>
+          <li> Take chart with a grain of salt as there's a lot of instances where a category doesn't appear at all in a given year</li>
+             <ul>
+              <li> Chi-square test usually requires a frequency of 5 to work properly</li>
+                <ul> 
+                  <li> Example: </li>
+                  <ul>
+                    <li>Paychecks only started coming in towards the end of 2024 (all of 2025 and continues into 2026)</li>
+                  </ul>
+              </ul>
+            </ul>
+          <li>Trends captured:</li>
+          <ul>
+            <li>Interest as a source of income was higher than expected in 2024</li>
+            <li>Investment Income lower than expected in 2024</li>
+            <li>Securities Trades were unexpectedly high in 2023</li>
+            <li>Transfers from outside sources are spiking so far in 2026</li>
+          </ul>
+        </ul>
       </div>
     </section>
 
