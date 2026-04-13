@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-602a10370eef29f5940c845f99fc138b"}, "mark": {"type": "area"}, "encoding": {"color": {"field": "Category", "legend": {"title": "Category", "values": ["Restaurants/Dining", "General Merchandise", "Entertainment", "Service Charges/Fees", "Online Services"]}, "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "order": {"field": "Category", "type": "nominal"}, "tooltip": [{"field": "year", "title": "Year", "type": "ordinal"}, {"field": "Category", "title": "Category", "type": "nominal"}, {"field": "proportion", "format": ".2%", "title": "Proportion", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "year", "title": "Year", "type": "ordinal"}, "y": {"axis": {"format": ".0%"}, "field": "proportion", "stack": "zero", "title": "Proportion of Transaction Count", "type": "quantitative"}}, "height": 450, "title": "Top 5 Spending Categories by Frequency Proportion, 2023\u20132026", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-602a10370eef29f5940c845f99fc138b": [{"Category": "Entertainment", "year": 2023, "proportion": 0.0011111111111111111}, {"Category": "General Merchandise", "year": 2023, "proportion": 0.0011111111111111111}, {"Category": "Online Services", "year": 2023, "proportion": 0.0013333333333333333}, {"Category": "Restaurants/Dining", "year": 2023, "proportion": 0.004888888888888889}, {"Category": "Service Charges/Fees", "year": 2023, "proportion": 0.0}, {"Category": "Entertainment", "year": 2024, "proportion": 0.0008496732026143792}, {"Category": "General Merchandise", "year": 2024, "proportion": 0.0027450980392156863}, {"Category": "Online Services", "year": 2024, "proportion": 6.535947712418301e-05}, {"Category": "Restaurants/Dining", "year": 2024, "proportion": 0.004379084967320261}, {"Category": "Service Charges/Fees", "year": 2024, "proportion": 0.0}, {"Category": "Entertainment", "year": 2025, "proportion": 0.0004419889502762431}, {"Category": "General Merchandise", "year": 2025, "proportion": 0.002596685082872928}, {"Category": "Online Services", "year": 2025, "proportion": 2.7624309392265193e-05}, {"Category": "Restaurants/Dining", "year": 2025, "proportion": 0.002845303867403315}, {"Category": "Service Charges/Fees", "year": 2025, "proportion": 0.0017403314917127071}, {"Category": "Entertainment", "year": 2026, "proportion": 0.00037037037037037035}, {"Category": "General Merchandise", "year": 2026, "proportion": 0.0025925925925925925}, {"Category": "Online Services", "year": 2026, "proportion": 0.0}, {"Category": "Restaurants/Dining", "year": 2026, "proportion": 0.004567901234567901}, {"Category": "Service Charges/Fees", "year": 2026, "proportion": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
