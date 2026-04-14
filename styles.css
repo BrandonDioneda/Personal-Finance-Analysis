@@ -195,7 +195,7 @@ body {
 }
 
 .ratio-1-5 .figure-frame-wrap {
-  aspect-ratio: 1 / 1.15;
+  aspect-ratio: 1.2;
 }
 
 .ratio-10-7 .figure-frame-wrap {
