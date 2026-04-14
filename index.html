@@ -90,7 +90,6 @@
 
       <div class="figure-card ratio-1-1">
         <h3>Spending Breakdown</h3>
-        <p>How total spending varies across the years 2023-2026</p>
         <div class="figure-frame-wrap">
           <iframe
             src="figures/spending/year_breakdown.html"
@@ -112,9 +111,20 @@
         </div>
       </div>
 
+      <div class="figure-card ratio-1-1">
+        <h3>Spending Categories</h3>
+        <p>How each category contributes to spending each year</p>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spending/cat_spend_props_by_year.html"
+            title="Spending Categories"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
       <div class="figure-card ratio-14-9">
         <h3>Top Spending Categories</h3>
-        <p></p>
         <div class="figure-frame-wrap">
           <iframe
             src="figures/spending/cat_spend_props_top5_area.html"
@@ -124,12 +134,48 @@
         </div>
       </div>
 
+      <div class="figure-card ratio-5-3">
+        <h3>Top Spending Categories on a Monthly Basis</h3>
+        <p></p>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spending/monthly_top5_prop_area_by_year.html"
+            title="Top Spending Categories on a Monthly Basis"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="figure-card tall-680">
+        <h3>Monthly Spending by Category</h3>
+        <p>Monthly spending for each category in each year</p>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spending/monthly_category_lines.html"
+            title="Monthly Spending by Category"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
       <div class="figure-card ratio-1-1">
-        <h3>Spending Breakdown</h3>
+        <h3>Spending Frequency</h3>
         <p>How frequent each category is across the years</p>
         <div class="figure-frame-wrap">
           <iframe
-            src="figures/spending/cat_spend_props_by_year.html"
+            src="figures/spending/cat_freq_props.html"
+            title="Category Frequency Proportions by Year"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="figure-card ratio-1-1">
+        <h3>Spending Frequency for Each Year</h3>
+        <p>How frequent each category is across the years</p>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spending/cat_freq_props_by_year.html"
             title="Category Frequency Proportions by Year"
             loading="lazy">
           </iframe>
@@ -148,42 +194,6 @@
         </div>
       </div>
 
-      <div class="figure-card ratio-1-1">
-        <h3>Average Spending Throughout the Week and per Year</h3>
-        <p></p>
-        <div class="figure-frame-wrap">
-          <iframe
-            src="figures/spending/weekday_avgs.html"
-            title="Average Spending Throughout the Week and per Year"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="figure-card tall-680">
-        <h3>Monthly Spending by Category</h3>
-        <p>Monthly spending for each category in each year</p>
-        <div class="figure-frame-wrap">
-          <iframe
-            src="figures/spending/monthly_category_lines.html"
-            title="Monthly Spending by Category"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="figure-card ratio-5-3">
-        <h3>Top Spending Categories on a Monthly Basis</h3>
-        <p></p>
-        <div class="figure-frame-wrap">
-          <iframe
-            src="figures/spending/monthly_top5_prop_area_by_year.html"
-            title="Top Spending Categories on a Monthly Basis"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
       <div class="figure-card ratio-5-3">
         <h3>Most Frequent Spending Categories on a Monthly Basis</h3>
         <p></p>
@@ -191,6 +201,18 @@
           <iframe
             src="figures/spending/monthly_top5_count_prop_area_by_year.html"
             title="Most Frequent Spending Categories on a Monthly Basis"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="figure-card ratio-1-1">
+        <h3>Average Spending Throughout the Week and per Year</h3>
+        <p></p>
+        <div class="figure-frame-wrap">
+          <iframe
+            src="figures/spending/weekday_avgs.html"
+            title="Average Spending Throughout the Week and per Year"
             loading="lazy">
           </iframe>
         </div>
@@ -303,9 +325,10 @@
         <h3>TVD Spending Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/spending_tvd_heatmap.png" alt="Spending TVD heatmap" />
         <p>
-          Differences between all the years with each other are statistcally significant
+          Differences between all the years with each other are statistcally significant (via hypothesis tests)
         </p>
         <ul>
+          <li>The closer the TVD is to 0, the closer the two distributions are to one another</li>
           <li> Based on the observed TVDs, 2025 and 2026 have similar patterns with each other already when it's only 3 months into 2026</li>
              <ul>
               <li> 2025 is the time where loan payments were starting, and I have made some of those same payments in 2026 (most significant category for those years too)</li>
@@ -323,7 +346,7 @@
         <h3>TVD Frequency Heatmap</h3>
         <img class="figure-image" src="figures/spend_ht/freq_tvd_heatmap.png" alt="Spending TVD frequency heatmap" />
         <p>
-          Differences between the years in terms of category proportions is statistically significant
+          Differences between the years in terms of category proportions are statistically significant
         </p>
         <ul>
           <li> Based on the observed TVDs, 2024 and 2026 have similar distributions</li>
@@ -338,12 +361,14 @@
           <li> Positive values → more transactions than expected</li>
           <li> Negative values → fewer transactions than expected</li>
         </ul>
-        <p>Trends found:</p>
-          <ul>
-            <li>Online services collapsed after 2023</li> 
-            <li>Financial transactions surged in 2025</li>
-            <li>Groceries + automotive increased in 2026</li>
-          </ul>
+        <ul>
+          <li> Trends found:</li>
+            <ul>
+              <li>Online services collapsed after 2023</li> 
+              <li>Financial transactions surged in 2025</li>
+              <li>Groceries + automotive increased in 2026</li>
+            </ul>
+        </ul>
       </div>
 
       <h2>Income Distribution Analysis</h2>
@@ -442,7 +467,8 @@
 
     <section id="conclusion" class="section">
       <h2>Conclusion</h2>
-      <p>The analysis reveals a clear shift in financial behavior over the 2023–2026 period. 
+      <p>
+        The analysis reveals a clear shift in financial behavior over the 2023–2026 period. 
         Spending and transaction activity were lowest in 2023 during unemployment, while 2024 
         served as a transitional year as employment began mid-year. By 2025, spending patterns 
         became more consistent and structured, reflecting the first full year of stable income. 
@@ -452,13 +478,13 @@
         financial patterns adapt over time in response to changes in employment, income 
         stability, and recurring obligations.
       </p>
-      <h3>Future Work</h3>
+      <h2>Future Work</h2>
         <p>
-        Future analysis could explore additional factors influencing spending behavior, 
-        such as seasonal effects, category-level forecasting, or predicting future 
-        spending trends using time-series models. Incorporating longer time periods 
-        and additional financial variables could also provide deeper insight into how 
-        income stability influences long-term financial habits.
+          Future analysis could explore additional factors influencing spending behavior, 
+          such as seasonal effects, category-level forecasting, or predicting future 
+          spending trends using time-series models. Incorporating longer time periods 
+          and additional financial variables could also provide deeper insight into how 
+          income stability influences long-term financial habits.
         </p>
     </section>
   </main>

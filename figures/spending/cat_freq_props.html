@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-058a639ee15cc37aec70032e928b7830"}, "mark": {"type": "arc"}, "encoding": {"color": {"field": "Category", "scale": {"domain": ["Automotive Expenses", "Clothing/Shoes", "Electronics", "Entertainment", "Gasoline/Fuel", "General Merchandise", "Groceries", "Hobbies", "Loans", "Online Services", "Other Expenses", "Personal Care", "Restaurants/Dining", "Securities Trades", "Service Charges/Fees", "Transfers", "Travel"], "scheme": "tableau20"}, "type": "nominal"}, "theta": {"field": "Amount", "title": "Percent", "type": "quantitative"}, "tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Amount", "format": ".2%", "title": "Proportion", "type": "quantitative"}]}, "height": 600, "title": "Spending Category Frequency Distribution (2023-2026)", "width": "container", "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-058a639ee15cc37aec70032e928b7830": [{"Category": "Automotive Expenses", "Amount": 0.0031201248049922}, {"Category": "Clothing/Shoes", "Amount": 0.029641185647425898}, {"Category": "Electronics", "Amount": 0.0046801872074883}, {"Category": "Entertainment", "Amount": 0.057722308892355696}, {"Category": "Gasoline/Fuel", "Amount": 0.0015600624024961}, {"Category": "General Merchandise", "Amount": 0.25273010920436817}, {"Category": "Groceries", "Amount": 0.0187207488299532}, {"Category": "Hobbies", "Amount": 0.0078003120124804995}, {"Category": "Loans", "Amount": 0.0171606864274571}, {"Category": "Online Services", "Amount": 0.0124804992199688}, {"Category": "Other Expenses", "Amount": 0.0187207488299532}, {"Category": "Personal Care", "Amount": 0.0234009360374415}, {"Category": "Restaurants/Dining", "Amount": 0.35725429017160687}, {"Category": "Securities Trades", "Amount": 0.0436817472698908}, {"Category": "Service Charges/Fees", "Amount": 0.09828393135725429}, {"Category": "Transfers", "Amount": 0.028081123244929798}, {"Category": "Travel", "Amount": 0.0249609984399376}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
