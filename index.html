@@ -39,31 +39,6 @@
         spending behavior across time and categories. The goal is to identify
         meaningful patterns and communicate them through visual and statistical analysis.
       </p>
-
-      <h2>Summary</h2>
-      <div style="padding: 1.5rem 0 0.5rem;">
-        <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 1rem;">TL;DR — 3 key takeaways</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-
-          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #534AB7;">
-            <p style="font-size: 11px; font-weight: 500; color: #534AB7; margin-bottom: 6px;">01</p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">Loan payments restructured the entire spending distribution</p>
-            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Absent in 2023–2024, loan payments emerge in 2025 as the single largest expenditure category — absorbing ~⅓ of total spending and compressing every other category's share. This one structural shift explains most of the divergence seen in the TVD heatmaps.</p>
-          </div>
-
-          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #1D9E75;">
-            <p style="font-size: 11px; font-weight: 500; color: #1D9E75; margin-bottom: 6px;">02</p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">2024 surplus > 2025 surplus, despite lower income</p>
-            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">2024 generated the largest income-to-spending margin of any year — not because income was highest, but because spending had not yet scaled to match it. By 2025, rising obligations narrowed the margin even as income grew. Income gains do not translate proportionally into savings.</p>
-          </div>
-
-          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #BA7517;">
-            <p style="font-size: 11px; font-weight: 500; color: #BA7517; margin-bottom: 6px;">03</p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">Spending volatility is a frequency problem, not a volume problem</p>
-            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">2024's high month-to-month variance is driven by a small number of large transactions concentrating in single categories — not by overall volume. By 2025, transaction activity diversifies across categories and months, producing stability without a reduction in total spend.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="question" class="section">
@@ -122,11 +97,12 @@
           </iframe>
         </div>
         <ul>
-          <li>2023 has the lowest spending, as I was unemployed at the time</li>
+          <li>2023 records the lowest aggregate spending across the observed period, 
+              consistent with reduced income and limited financial activity
+          </li>
           <li>2024 spending increases, matching when employment began</li>
-          <li>2025 shows the largest spending, my first full year of stable income</li>
-          <li>2026 spending can't be commented on too much as it's only a few months into the year,
-              however it already exceeds the spending of the first two years</li>
+          <li>22025 represents the peak spending year, driven by the full-year presence of recurring financial obligations absent in prior years</li>
+          <li>2026 data, while limited to a partial year, already surpasses 2023 and 2024 totals</li>
         </ul>
       </div>
 
@@ -143,7 +119,7 @@
         <ul>
           <li>Top 5 Spending Categories Dominating Spending:</li>
           <ul>
-            <li>Loan payments take a third of the spending over the entire time period captured in the bank transactions</li>
+            <li>Loan payments represent approximately one-third of total spending across the dataset, making it the single largest expenditure category by dollar volume</li>
             <li>Transfers out of the checkings and savings accounts</li>
             <li>General Merchandise</li>
             <li>Restaurants/Dining</li>
@@ -163,9 +139,18 @@
           </iframe>
         </div>
         <ul>
-          <li>Loan payments appear in 2025, indicating the introduction of a new recurring financial obligation</li>
-          <li>2025 and 2026 share extremely similar category proportions, suggesting stable spending habits</li>
-          <li>Restaurants/Dining and Transfers remains to be a dominating prescence for most years</li>
+          <li>
+              Loan payments are absent from 2023 and 2024 distributions and emerge as a dominant category in 2025, 
+              representing a structural shift in spending composition rather than a gradual trend
+          </li>
+          <li>
+              The near-identical category distributions between 2025 and 2026 (partial year) indicate that spending composition 
+              stabilized following the introduction of recurring obligations, with no significant new categories emerging
+          </li>
+          <li>
+              Restaurants/Dining and Transfers maintain a persistent share across all years, suggesting these categories represent 
+              baseline consumption that is largely inelastic to changes in income level
+          </li>
         </ul>
       </div>
 
@@ -365,7 +350,7 @@
           <li>2023 income is minimal, reflecting unemployment</li>
           <li>2024 income increases when employment begins</li>
           <li>2025 represents the first full year of stable income</li>
-          <li>2026 income (for the same reason as 2026 spending) can't be commented on too much</li>
+          <li>2026 income data is left-censored (partial year); comparisons to full-year periods should be interpreted with this constraint in mind</li>
         </ul>
       </div>
 
@@ -384,7 +369,10 @@
             <li>Categories with large frequencies don't necessarily dominate income/spending contributions</li>
             <li>Although, there's an exception with the Deposits category that has the same impact when looking at both distributions</li>
           </ul>
-          <li>Paychecks/Salary making the biggest impact in terms of frequency and earnings which is expected</li>
+          <li>
+              Across the full dataset, Paychecks/Salary is the dominant income category by both dollar volume and transaction frequency — 
+              the only category where high frequency and high dollar contribution coincide, unlike the inverse relationship observed in spending
+          </li>
         </ul>
       </div>
 
@@ -398,9 +386,18 @@
           </iframe>
         </div>
         <ul>
-          <li>Income becomes concentrated in a primary source beginning in 2024</li>
-          <li>2025 and 2026 show similar income composition, reflecting stable employment</li>
-          <li>Stable employment simplifies the income structure and reduces variability</li>
+          <li> 
+            Prior to 2024, income is distributed across multiple categories with no single dominant source, 
+            indicating reliance on a diversified but low-volume set of income streams
+          </li>
+          <li>
+            Beginning in 2024, Paychecks/Salary emerges as the primary income category, and its share continues to grow through 2025 — 
+            compressing the relative contribution of all other income sources
+          </li>
+          <li>
+            The convergence of 2025 and 2026 income distributions suggests that the income composition has reached a 
+            stable equilibrium, with payroll representing a structurally dominant and predictable share of total inflows
+          </li>
         </ul>
       </div>
 
@@ -496,13 +493,16 @@
           </iframe>
         </div>
         <ul>
-          <li>Income spikes on Thursdays as Thursday nights is payday for my job</li>
-            <ul>
-              <li>Despite not being employed in 2023, Thursadys still appear as the most common day that I receive income</li>
-              <li>May be due to how my bank operates on that day, or just by pure random chance</li>
-            </ul>
-          <li>There isn't a single day that is consistently a high spending day across the years</li>
-          <li>Shows a structural pattern where income arrives periodically but spending occurs daily</li>
+          <li>
+              Thursday is the consistently highest-income weekday across the dataset, driven by a regular payroll deposit cycle. 
+              Notably, this pattern also appears in 2023 — prior to documented employment — which may reflect bank posting behavior 
+              (e.g., delayed ACH settlement from prior periods) or periodic non-payroll deposits that coincidentally concentrate on that day
+          </li>
+          <li>
+              No single weekday shows a consistent elevation in spending across all years. 
+              Spending is distributed relatively uniformly across the week, suggesting expenditure is driven by daily consumption 
+              habits rather than any structural temporal pattern
+          </li>
         </ul>
       </div>
 
@@ -615,16 +615,9 @@
         </p>
         <ul>
           <li>The closer the TVD is to 0, the closer the two distributions are to one another</li>
-          <li> Based on the observed TVDs, 2025 and 2026 have similar patterns with each other already when it's only 3 months into 2026</li>
-             <ul>
-              <li> 2025 is the time where loan payments were starting, and I have made some of those same payments in 2026 (most significant category for those years too)</li>
-            </ul>
-          <li> The most drastic difference is 2023 vs. 2025 which makes sense as I was employed for all of 2025 (partially in 2024 as that's when I got the job during the summer) and was unemployed in 2023</li>
-          <li> TVD is the highest in comparison to 2023 the most</li>
-          <li> Would've thought that 2024 vs. 2025 would have the most similarities, but that wasn't the case (however not exactly the opposite of what I thought either)</li>
-            <ul> 
-              <li> I did get the job pretty late into 2024 and had more money to spend in 2025 </li>
-            </ul>
+          <li> The 2025–2026 pair yields the lowest TVD, consistent with the structural similarity in spending composition identified in the proportional charts. The persistence of Loan Payments as the dominant category across both years is the likely primary driver of this convergence</li>
+          <li> The 2023–2025 pair yields the highest TVD, reflecting the largest structural divergence in the dataset. This is consistent with the absence of recurring financial obligations (loans, stable payroll-linked discretionary spending) in 2023 that define the 2025 distribution</li>
+          <li> The 2024–2025 TVD, while lower than 2023-based comparisons, is higher than might be expected given their temporal adjacency. This is consistent with the late-year onset of employment in 2024, which limited the duration of 2025-like spending patterns within that calendar year</li>
         </ul>
       </div>
 
@@ -635,8 +628,8 @@
           Differences between the years in terms of category proportions are statistically significant
         </p>
         <ul>
-          <li> Based on the observed TVDs, 2024 and 2026 have similar distributions</li>
-          <li> The most drastic difference is 2023 vs. 2025, which is the same trend for the spending distribution comparison</li>
+          <li> The 2024–2026 pair shows the lowest TVD in the frequency heatmap — a divergence from the spending TVD result, where 2025–2026 was most similar. This suggests that while 2025 and 2026 share similar dollar-weighted spending composition, their transaction frequency profiles are more closely aligned with 2024, possibly reflecting similarities in the types of purchases made rather than their scale</li>
+          <li> The 2023–2025 pair again shows the highest TVD, consistent across both spending and frequency dimensions, reinforcing that 2023 represents the most structurally distinct financial period in the dataset.</li>
         </ul>
       </div>
 
@@ -664,8 +657,9 @@
         <img class="figure-image" src="figures/income_ht/earning_tvd_heatmap.png" alt="Income TVD heatmap" />
         <p>Differences in the earning distributions were all statistically significant</p>
         <ul>
-            <li>2023 vs 2026: Most different (followed closely with 2023 vs 2025)</li> 
-            <li>2025 vs 2026: Most similar</li>
+            <li>The 2023–2026 pair yields the highest TVD, reflecting the maximum structural divergence between a period of non-employment income and a period of fully established payroll-dominant income</li> 
+            <li>The close TVD values for 2023–2025 and 2023–2026 indicate that 2023 is an outlier year in income structure, and that the transition away from that structure occurred primarily between 2023 and 2024</li>
+            <li>The 2025–2026 pair yields the lowest TVD, consistent with income composition having stabilized — both years are characterized by Paychecks/Salary as the dominant category, producing near-identical distributional profiles.</li>
           </ul>
       </div>
       
@@ -674,8 +668,9 @@
         <img class="figure-image" src="figures/income_ht/freq_tvd_heatmap.png" alt="Income TVD frequency heatmap" />
         <p>Differences between the income source distributions were all statistically significant</p>
         <ul>
-            <li>2023 vs 2024: Most different</li> 
-            <li>2025 vs 2026: Most similar (like the earning distribution)</li>
+            <li>The highest TVD in income frequency occurs between 2023 and 2024 — unlike the earnings heatmap, where 2023–2026 was most divergent. This indicates that the types of income transactions changed most dramatically at the 2023–2024 boundary, even if the dollar-weighted divergence continued to widen through 2026</li> 
+            <li>The 2025–2026 pair again shows the lowest TVD, consistent with the earnings distribution result, and reinforces that income transaction behavior has stabilized in the most recent years of the dataset</li>
+            <li>The asymmetry between which year pairs are most different in earnings vs. frequency TVDs (2023–2026 vs. 2023–2024) suggests that the structural shift in income composition lagged slightly behind the shift in income types — payroll deposits began appearing in 2024, but their dollar dominance only fully materialized by 2025</li>
           </ul>
       </div>
 
@@ -706,7 +701,30 @@
 
     <section id="results" class="section">
       <h2>Key Findings</h2>
-      <ul>
+      <div style="padding: 1.5rem 0 0.5rem;">
+        <p style="font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 1rem;">TL;DR — 3 key takeaways</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+
+          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #534AB7;">
+            <p style="font-size: 11px; font-weight: 500; color: #534AB7; margin-bottom: 6px;">01</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">Loan payments restructured the entire spending distribution</p>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Absent in 2023–2024, loan payments emerge in 2025 as the single largest expenditure category — absorbing ~⅓ of total spending and compressing every other category's share. This one structural shift explains most of the divergence seen in the TVD heatmaps.</p>
+          </div>
+
+          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #1D9E75;">
+            <p style="font-size: 11px; font-weight: 500; color: #1D9E75; margin-bottom: 6px;">02</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">2024 surplus > 2025 surplus, despite lower income</p>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">2024 generated the largest income-to-spending margin of any year — not because income was highest, but because spending had not yet scaled to match it. By 2025, rising obligations narrowed the margin even as income grew. Income gains do not translate proportionally into savings.</p>
+          </div>
+
+          <div style="background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; border-left: 3px solid #BA7517;">
+            <p style="font-size: 11px; font-weight: 500; color: #BA7517; margin-bottom: 6px;">03</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.4;">Spending volatility is a frequency problem, not a volume problem</p>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">2024's high month-to-month variance is driven by a small number of large transactions concentrating in single categories — not by overall volume. By 2025, transaction activity diversifies across categories and months, producing stability without a reduction in total spend.</p>
+          </div>
+        </div>
+      </div>
+      <!-- <ul>
         <li>
           Spending and income patterns show a clear transition between 2023 and 2025. 
           2023 reflects a period of unemployment with lower spending and income activity, 
@@ -748,7 +766,7 @@
           more continuously. This highlights the difference between periodic income 
           deposits and ongoing daily expenditures.
         </li>
-      </ul>
+      </ul> -->
     </section>
 
     <section id="conclusion" class="section">
