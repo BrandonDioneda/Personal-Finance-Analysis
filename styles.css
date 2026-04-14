@@ -103,33 +103,49 @@ body {
 .figure-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  margin: 2rem auto;
+  padding: 1.1rem 1.25rem;
+  margin: 1.35rem auto;
   width: 100%;
   max-width: 1200px;
   box-shadow: var(--shadow);
 }
 
 .figure-card h3 {
-  margin-top: 0;
+  margin: 0 0 0.35rem 0;
   text-align: center;
+  line-height: 1.25;
 }
 
 .figure-card p {
   text-align: center;
   max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0.55rem auto;
 }
 
 .figure-frame-wrap {
   width: 100%;
-  margin: 1rem auto 0;
+  margin: 0.45rem auto 0;
   border-radius: 12px;
   background: white;
   overflow: hidden;
   position: relative;
   min-width: 0;
+}
+
+.figure-card > ul {
+  max-width: 950px;
+  margin: 0.7rem auto 0;
+  padding-left: 1.15rem;
+}
+
+.figure-card ul ul {
+  margin-top: 0.2rem;
+  margin-bottom: 0.35rem;
+  padding-left: 1.1rem;
+}
+
+.figure-card li {
+  margin-bottom: 0.22rem;
 }
 
 .figure-frame-wrap iframe {
@@ -195,6 +211,10 @@ body {
 
 .ratio-10-7-wrap {
   aspect-ratio: 10 / 7;
+}
+
+.ratio-4-3 .figure-frame-wrap {
+  aspect-ratio: 4 / 3;
 }
 
 ul {
