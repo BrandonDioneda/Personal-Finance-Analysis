@@ -195,7 +195,7 @@ body {
 }
 
 .ratio-1-5 .figure-frame-wrap {
-  aspect-ratio: 1.15;
+  aspect-ratio: 1 / 1.17;
 }
 
 .ratio-10-7 .figure-frame-wrap {
@@ -206,7 +206,6 @@ body {
   aspect-ratio: 14 / 9;
 }
 
-/* Aspect ratios for frames inside multi-chart rows */
 .ratio-1-1-wrap {
   aspect-ratio: 1 / 1;
 }
